@@ -1,0 +1,3217 @@
+{
+  "W00001": {
+    "order_id": "W00001",
+    "customer_id": "C0019",
+    "status": "pending",
+    "placed_at": "2026-01-15T19:45:00Z",
+    "items": [
+      {
+        "sku": "P0001-03",
+        "product_id": "P0001",
+        "option": "L",
+        "quantity": 3,
+        "unit_price": 89.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1278 Cedar Hollow Dr",
+      "line2": "",
+      "city": "Burlington",
+      "state": "VT",
+      "postal_code": "05401",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00002": {
+    "order_id": "W00002",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-11-14T10:38:00Z",
+    "items": [
+      {
+        "sku": "P0029-02",
+        "product_id": "P0029",
+        "option": "9",
+        "quantity": 1,
+        "unit_price": 76.0
+      },
+      {
+        "sku": "P0009-01",
+        "product_id": "P0009",
+        "option": "brass",
+        "quantity": 1,
+        "unit_price": 268.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00001"
+  },
+  "W00003": {
+    "order_id": "W00003",
+    "customer_id": "C0016",
+    "status": "delivered",
+    "placed_at": "2025-12-27T16:38:00Z",
+    "items": [
+      {
+        "sku": "P0018-01",
+        "product_id": "P0018",
+        "option": "black",
+        "quantity": 2,
+        "unit_price": 68.0
+      },
+      {
+        "sku": "P0032-02",
+        "product_id": "P0032",
+        "option": "slate",
+        "quantity": 1,
+        "unit_price": 112.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "413 Halyard Row",
+      "line2": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "postal_code": "98225",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00002"
+  },
+  "W00004": {
+    "order_id": "W00004",
+    "customer_id": "C0002",
+    "status": "cancelled",
+    "placed_at": "2025-12-27T20:26:00Z",
+    "items": [
+      {
+        "sku": "P0033-02",
+        "product_id": "P0033",
+        "option": "long",
+        "quantity": 2,
+        "unit_price": 164.0
+      },
+      {
+        "sku": "P0029-01",
+        "product_id": "P0029",
+        "option": "8",
+        "quantity": 1,
+        "unit_price": 76.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-12-27T12:12:00Z",
+    "cancellation_reason": "no_longer_needed"
+  },
+  "W00005": {
+    "order_id": "W00005",
+    "customer_id": "C0016",
+    "status": "pending",
+    "placed_at": "2025-11-22T12:45:00Z",
+    "items": [
+      {
+        "sku": "P0030-03",
+        "product_id": "P0030",
+        "option": "clay",
+        "quantity": 3,
+        "unit_price": 42.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "413 Halyard Row",
+      "line2": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "postal_code": "98225",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00006": {
+    "order_id": "W00006",
+    "customer_id": "C0030",
+    "status": "processing",
+    "placed_at": "2025-11-22T10:52:00Z",
+    "items": [
+      {
+        "sku": "P0005-02",
+        "product_id": "P0005",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 195.0
+      },
+      {
+        "sku": "P0022-02",
+        "product_id": "P0022",
+        "option": "white",
+        "quantity": 1,
+        "unit_price": 79.0
+      },
+      {
+        "sku": "P0021-01",
+        "product_id": "P0021",
+        "option": "tactile",
+        "quantity": 1,
+        "unit_price": 149.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "957 Quarry Rd",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00007": {
+    "order_id": "W00007",
+    "customer_id": "C0011",
+    "status": "delivered",
+    "placed_at": "2026-01-02T15:26:00Z",
+    "items": [
+      {
+        "sku": "P0021-01",
+        "product_id": "P0021",
+        "option": "tactile",
+        "quantity": 1,
+        "unit_price": 149.0
+      },
+      {
+        "sku": "P0028-04",
+        "product_id": "P0028",
+        "option": "11",
+        "quantity": 1,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0013-02",
+        "product_id": "P0013",
+        "option": "king",
+        "quantity": 3,
+        "unit_price": 224.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4393 Pemberton Pl",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00003"
+  },
+  "W00008": {
+    "order_id": "W00008",
+    "customer_id": "C0007",
+    "status": "pending",
+    "placed_at": "2026-01-08T13:17:00Z",
+    "items": [
+      {
+        "sku": "P0024-01",
+        "product_id": "P0024",
+        "option": "grey",
+        "quantity": 1,
+        "unit_price": 22.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1279 Foundry Way",
+      "line2": "",
+      "city": "Madison",
+      "state": "WI",
+      "postal_code": "53703",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00009": {
+    "order_id": "W00009",
+    "customer_id": "C0029",
+    "status": "delivered",
+    "placed_at": "2026-01-05T13:26:00Z",
+    "items": [
+      {
+        "sku": "P0006-03",
+        "product_id": "P0006",
+        "option": "L",
+        "quantity": 2,
+        "unit_price": 82.0
+      },
+      {
+        "sku": "P0028-04",
+        "product_id": "P0028",
+        "option": "11",
+        "quantity": 3,
+        "unit_price": 245.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4421 Halyard Row",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00004"
+  },
+  "W00010": {
+    "order_id": "W00010",
+    "customer_id": "C0024",
+    "status": "processing",
+    "placed_at": "2026-01-05T14:04:00Z",
+    "items": [
+      {
+        "sku": "P0024-02",
+        "product_id": "P0024",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 22.0
+      },
+      {
+        "sku": "P0029-02",
+        "product_id": "P0029",
+        "option": "9",
+        "quantity": 1,
+        "unit_price": 76.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "480 Tanner Alley",
+      "line2": "",
+      "city": "Savannah",
+      "state": "GA",
+      "postal_code": "31401",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00011": {
+    "order_id": "W00011",
+    "customer_id": "C0021",
+    "status": "processing",
+    "placed_at": "2025-11-14T17:26:00Z",
+    "items": [
+      {
+        "sku": "P0017-01",
+        "product_id": "P0017",
+        "option": "natural",
+        "quantity": 1,
+        "unit_price": 94.0
+      },
+      {
+        "sku": "P0004-02",
+        "product_id": "P0004",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 74.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4553 Tanner Alley",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00012": {
+    "order_id": "W00012",
+    "customer_id": "C0005",
+    "status": "processing",
+    "placed_at": "2025-12-11T15:17:00Z",
+    "items": [
+      {
+        "sku": "P0001-01",
+        "product_id": "P0001",
+        "option": "S",
+        "quantity": 3,
+        "unit_price": 89.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1222 Tanner Alley",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00013": {
+    "order_id": "W00013",
+    "customer_id": "C0017",
+    "status": "shipped",
+    "placed_at": "2026-01-02T17:04:00Z",
+    "items": [
+      {
+        "sku": "P0006-01",
+        "product_id": "P0006",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 82.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4131 Kestrel Dr",
+      "line2": "",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "postal_code": "48104",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00005"
+  },
+  "W00014": {
+    "order_id": "W00014",
+    "customer_id": "C0009",
+    "status": "shipped",
+    "placed_at": "2026-01-15T18:04:00Z",
+    "items": [
+      {
+        "sku": "P0029-03",
+        "product_id": "P0029",
+        "option": "10",
+        "quantity": 2,
+        "unit_price": 76.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1912 Tanner Alley",
+      "line2": "",
+      "city": "Burlington",
+      "state": "VT",
+      "postal_code": "05401",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00006"
+  },
+  "W00015": {
+    "order_id": "W00015",
+    "customer_id": "C0020",
+    "status": "shipped",
+    "placed_at": "2026-01-15T15:52:00Z",
+    "items": [
+      {
+        "sku": "P0026-04",
+        "product_id": "P0026",
+        "option": "11",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3748 Wren Street",
+      "line2": "",
+      "city": "Missoula",
+      "state": "MT",
+      "postal_code": "59801",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00007"
+  },
+  "W00016": {
+    "order_id": "W00016",
+    "customer_id": "C0030",
+    "status": "delivered",
+    "placed_at": "2025-11-14T15:17:00Z",
+    "items": [
+      {
+        "sku": "P0004-03",
+        "product_id": "P0004",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 74.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "957 Quarry Rd",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00008"
+  },
+  "W00017": {
+    "order_id": "W00017",
+    "customer_id": "C0026",
+    "status": "returned",
+    "placed_at": "2026-01-05T20:17:00Z",
+    "items": [
+      {
+        "sku": "P0032-02",
+        "product_id": "P0032",
+        "option": "slate",
+        "quantity": 1,
+        "unit_price": 112.0
+      },
+      {
+        "sku": "P0017-02",
+        "product_id": "P0017",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 94.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "2790 Halyard Row",
+      "line2": "",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "postal_code": "48104",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00009",
+    "returned_at": "2026-01-14T11:03:00Z"
+  },
+  "W00018": {
+    "order_id": "W00018",
+    "customer_id": "C0015",
+    "status": "shipped",
+    "placed_at": "2026-01-05T16:17:00Z",
+    "items": [
+      {
+        "sku": "P0027-04",
+        "product_id": "P0027",
+        "option": "11",
+        "quantity": 1,
+        "unit_price": 152.0
+      },
+      {
+        "sku": "P0007-02",
+        "product_id": "P0007",
+        "option": "L",
+        "quantity": 2,
+        "unit_price": 34.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "267 Quarry Rd",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00010"
+  },
+  "W00019": {
+    "order_id": "W00019",
+    "customer_id": "C0003",
+    "status": "processing",
+    "placed_at": "2026-01-02T18:38:00Z",
+    "items": [
+      {
+        "sku": "P0013-02",
+        "product_id": "P0013",
+        "option": "king",
+        "quantity": 1,
+        "unit_price": 224.0
+      },
+      {
+        "sku": "P0012-02",
+        "product_id": "P0012",
+        "option": "charcoal",
+        "quantity": 1,
+        "unit_price": 88.0
+      },
+      {
+        "sku": "P0012-01",
+        "product_id": "P0012",
+        "option": "oat",
+        "quantity": 1,
+        "unit_price": 88.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1808 Birchwood Ln",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00020": {
+    "order_id": "W00020",
+    "customer_id": "C0008",
+    "status": "delivered",
+    "placed_at": "2026-01-13T17:52:00Z",
+    "items": [
+      {
+        "sku": "P0028-02",
+        "product_id": "P0028",
+        "option": "9",
+        "quantity": 1,
+        "unit_price": 245.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4528 Tanner Alley",
+      "line2": "",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "postal_code": "48104",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00011"
+  },
+  "W00021": {
+    "order_id": "W00021",
+    "customer_id": "C0002",
+    "status": "returned",
+    "placed_at": "2026-01-15T17:52:00Z",
+    "items": [
+      {
+        "sku": "P0020-02",
+        "product_id": "P0020",
+        "option": "black",
+        "quantity": 2,
+        "unit_price": 349.0
+      },
+      {
+        "sku": "P0006-01",
+        "product_id": "P0006",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 82.0
+      },
+      {
+        "sku": "P0039-02",
+        "product_id": "P0039",
+        "option": "ruled",
+        "quantity": 1,
+        "unit_price": 28.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00012",
+    "returned_at": "2026-01-24T11:03:00Z"
+  },
+  "W00022": {
+    "order_id": "W00022",
+    "customer_id": "C0027",
+    "status": "shipped",
+    "placed_at": "2026-01-05T16:04:00Z",
+    "items": [
+      {
+        "sku": "P0030-03",
+        "product_id": "P0030",
+        "option": "clay",
+        "quantity": 3,
+        "unit_price": 42.0
+      },
+      {
+        "sku": "P0026-01",
+        "product_id": "P0026",
+        "option": "8",
+        "quantity": 2,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1796 Ellsworth Ct",
+      "line2": "",
+      "city": "Portland",
+      "state": "OR",
+      "postal_code": "97214",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00013"
+  },
+  "W00023": {
+    "order_id": "W00023",
+    "customer_id": "C0029",
+    "status": "pending",
+    "placed_at": "2026-01-13T14:26:00Z",
+    "items": [
+      {
+        "sku": "P0032-01",
+        "product_id": "P0032",
+        "option": "moss",
+        "quantity": 1,
+        "unit_price": 112.0
+      },
+      {
+        "sku": "P0041-02",
+        "product_id": "P0041",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 62.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4421 Halyard Row",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00024": {
+    "order_id": "W00024",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2026-01-13T09:17:00Z",
+    "items": [
+      {
+        "sku": "P0012-03",
+        "product_id": "P0012",
+        "option": "rust",
+        "quantity": 1,
+        "unit_price": 88.0
+      },
+      {
+        "sku": "P0004-02",
+        "product_id": "P0004",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 74.0
+      },
+      {
+        "sku": "P0041-01",
+        "product_id": "P0041",
+        "option": "tan",
+        "quantity": 1,
+        "unit_price": 62.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00025": {
+    "order_id": "W00025",
+    "customer_id": "C0003",
+    "status": "returned",
+    "placed_at": "2025-12-19T09:52:00Z",
+    "items": [
+      {
+        "sku": "P0033-02",
+        "product_id": "P0033",
+        "option": "long",
+        "quantity": 1,
+        "unit_price": 164.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1808 Birchwood Ln",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00014",
+    "returned_at": "2025-12-28T11:03:00Z"
+  },
+  "W00026": {
+    "order_id": "W00026",
+    "customer_id": "C0011",
+    "status": "cancelled",
+    "placed_at": "2025-11-22T19:52:00Z",
+    "items": [
+      {
+        "sku": "P0011-02",
+        "product_id": "P0011",
+        "option": "slate",
+        "quantity": 1,
+        "unit_price": 96.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4393 Pemberton Pl",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-11-22T13:12:00Z",
+    "cancellation_reason": "ordered_by_mistake"
+  },
+  "W00027": {
+    "order_id": "W00027",
+    "customer_id": "C0010",
+    "status": "returned",
+    "placed_at": "2026-01-05T15:45:00Z",
+    "items": [
+      {
+        "sku": "P0017-01",
+        "product_id": "P0017",
+        "option": "natural",
+        "quantity": 1,
+        "unit_price": 94.0
+      },
+      {
+        "sku": "P0012-01",
+        "product_id": "P0012",
+        "option": "oat",
+        "quantity": 3,
+        "unit_price": 88.0
+      },
+      {
+        "sku": "P0003-03",
+        "product_id": "P0003",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1805 Tanner Alley",
+      "line2": "",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "postal_code": "48104",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00015",
+    "returned_at": "2026-01-14T11:03:00Z"
+  },
+  "W00028": {
+    "order_id": "W00028",
+    "customer_id": "C0023",
+    "status": "cancelled",
+    "placed_at": "2026-01-15T15:38:00Z",
+    "items": [
+      {
+        "sku": "P0006-01",
+        "product_id": "P0006",
+        "option": "S",
+        "quantity": 3,
+        "unit_price": 82.0
+      },
+      {
+        "sku": "P0020-02",
+        "product_id": "P0020",
+        "option": "black",
+        "quantity": 2,
+        "unit_price": 349.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "2897 Tanner Alley",
+      "line2": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "postal_code": "98225",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2026-01-15T16:12:00Z",
+    "cancellation_reason": "ordered_by_mistake"
+  },
+  "W00029": {
+    "order_id": "W00029",
+    "customer_id": "C0021",
+    "status": "delivered",
+    "placed_at": "2025-12-03T13:17:00Z",
+    "items": [
+      {
+        "sku": "P0028-04",
+        "product_id": "P0028",
+        "option": "11",
+        "quantity": 2,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0022-01",
+        "product_id": "P0022",
+        "option": "graphite",
+        "quantity": 3,
+        "unit_price": 79.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4553 Tanner Alley",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00016"
+  },
+  "W00030": {
+    "order_id": "W00030",
+    "customer_id": "C0004",
+    "status": "shipped",
+    "placed_at": "2026-01-08T11:45:00Z",
+    "items": [
+      {
+        "sku": "P0030-01",
+        "product_id": "P0030",
+        "option": "steel",
+        "quantity": 1,
+        "unit_price": 42.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3011 Marlowe St",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00017"
+  },
+  "W00031": {
+    "order_id": "W00031",
+    "customer_id": "C0030",
+    "status": "pending",
+    "placed_at": "2025-11-14T08:52:00Z",
+    "items": [
+      {
+        "sku": "P0012-02",
+        "product_id": "P0012",
+        "option": "charcoal",
+        "quantity": 1,
+        "unit_price": 88.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "957 Quarry Rd",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00032": {
+    "order_id": "W00032",
+    "customer_id": "C0021",
+    "status": "processing",
+    "placed_at": "2026-01-15T14:26:00Z",
+    "items": [
+      {
+        "sku": "P0029-02",
+        "product_id": "P0029",
+        "option": "9",
+        "quantity": 2,
+        "unit_price": 76.0
+      },
+      {
+        "sku": "P0004-04",
+        "product_id": "P0004",
+        "option": "XL",
+        "quantity": 1,
+        "unit_price": 74.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4553 Tanner Alley",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00033": {
+    "order_id": "W00033",
+    "customer_id": "C0014",
+    "status": "delivered",
+    "placed_at": "2025-12-11T09:26:00Z",
+    "items": [
+      {
+        "sku": "P0029-03",
+        "product_id": "P0029",
+        "option": "10",
+        "quantity": 1,
+        "unit_price": 76.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1397 Birchwood Ln",
+      "line2": "",
+      "city": "Missoula",
+      "state": "MT",
+      "postal_code": "59801",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00018"
+  },
+  "W00034": {
+    "order_id": "W00034",
+    "customer_id": "C0020",
+    "status": "pending",
+    "placed_at": "2026-01-05T18:17:00Z",
+    "items": [
+      {
+        "sku": "P0021-02",
+        "product_id": "P0021",
+        "option": "linear",
+        "quantity": 1,
+        "unit_price": 149.0
+      },
+      {
+        "sku": "P0023-01",
+        "product_id": "P0023",
+        "option": "white",
+        "quantity": 2,
+        "unit_price": 54.0
+      },
+      {
+        "sku": "P0002-04",
+        "product_id": "P0002",
+        "option": "XL",
+        "quantity": 2,
+        "unit_price": 118.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3748 Wren Street",
+      "line2": "",
+      "city": "Missoula",
+      "state": "MT",
+      "postal_code": "59801",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00035": {
+    "order_id": "W00035",
+    "customer_id": "C0027",
+    "status": "delivered",
+    "placed_at": "2025-12-03T12:38:00Z",
+    "items": [
+      {
+        "sku": "P0026-01",
+        "product_id": "P0026",
+        "option": "8",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1796 Ellsworth Ct",
+      "line2": "",
+      "city": "Portland",
+      "state": "OR",
+      "postal_code": "97214",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00019"
+  },
+  "W00036": {
+    "order_id": "W00036",
+    "customer_id": "C0002",
+    "status": "pending",
+    "placed_at": "2026-01-15T08:38:00Z",
+    "items": [
+      {
+        "sku": "P0028-04",
+        "product_id": "P0028",
+        "option": "11",
+        "quantity": 1,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0023-02",
+        "product_id": "P0023",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 54.0
+      },
+      {
+        "sku": "P0005-02",
+        "product_id": "P0005",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 195.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00037": {
+    "order_id": "W00037",
+    "customer_id": "C0006",
+    "status": "delivered",
+    "placed_at": "2026-01-13T12:17:00Z",
+    "items": [
+      {
+        "sku": "P0030-02",
+        "product_id": "P0030",
+        "option": "sage",
+        "quantity": 1,
+        "unit_price": 42.0
+      },
+      {
+        "sku": "P0001-04",
+        "product_id": "P0001",
+        "option": "XL",
+        "quantity": 3,
+        "unit_price": 89.0
+      },
+      {
+        "sku": "P0026-04",
+        "product_id": "P0026",
+        "option": "11",
+        "quantity": 2,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1936 Larkspur Ave",
+      "line2": "",
+      "city": "Missoula",
+      "state": "MT",
+      "postal_code": "59801",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00020"
+  },
+  "W00038": {
+    "order_id": "W00038",
+    "customer_id": "C0003",
+    "status": "returned",
+    "placed_at": "2026-01-15T18:26:00Z",
+    "items": [
+      {
+        "sku": "P0028-05",
+        "product_id": "P0028",
+        "option": "12",
+        "quantity": 1,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0014-01",
+        "product_id": "P0014",
+        "option": "10in",
+        "quantity": 3,
+        "unit_price": 79.0
+      },
+      {
+        "sku": "P0008-01",
+        "product_id": "P0008",
+        "option": "brass",
+        "quantity": 1,
+        "unit_price": 142.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1808 Birchwood Ln",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00021",
+    "returned_at": "2026-01-24T11:03:00Z"
+  },
+  "W00039": {
+    "order_id": "W00039",
+    "customer_id": "C0029",
+    "status": "shipped",
+    "placed_at": "2025-11-14T14:52:00Z",
+    "items": [
+      {
+        "sku": "P0006-03",
+        "product_id": "P0006",
+        "option": "L",
+        "quantity": 3,
+        "unit_price": 82.0
+      },
+      {
+        "sku": "P0012-03",
+        "product_id": "P0012",
+        "option": "rust",
+        "quantity": 1,
+        "unit_price": 88.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4421 Halyard Row",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00022"
+  },
+  "W00040": {
+    "order_id": "W00040",
+    "customer_id": "C0016",
+    "status": "delivered",
+    "placed_at": "2025-12-27T14:52:00Z",
+    "items": [
+      {
+        "sku": "P0028-03",
+        "product_id": "P0028",
+        "option": "10",
+        "quantity": 2,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0005-02",
+        "product_id": "P0005",
+        "option": "M",
+        "quantity": 3,
+        "unit_price": 195.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "413 Halyard Row",
+      "line2": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "postal_code": "98225",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00023"
+  },
+  "W00041": {
+    "order_id": "W00041",
+    "customer_id": "C0016",
+    "status": "shipped",
+    "placed_at": "2025-12-27T13:52:00Z",
+    "items": [
+      {
+        "sku": "P0017-01",
+        "product_id": "P0017",
+        "option": "natural",
+        "quantity": 1,
+        "unit_price": 94.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "413 Halyard Row",
+      "line2": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "postal_code": "98225",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00024"
+  },
+  "W00042": {
+    "order_id": "W00042",
+    "customer_id": "C0016",
+    "status": "delivered",
+    "placed_at": "2026-01-05T10:17:00Z",
+    "items": [
+      {
+        "sku": "P0004-03",
+        "product_id": "P0004",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 74.0
+      },
+      {
+        "sku": "P0001-01",
+        "product_id": "P0001",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 89.0
+      },
+      {
+        "sku": "P0040-02",
+        "product_id": "P0040",
+        "option": "black",
+        "quantity": 3,
+        "unit_price": 34.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "413 Halyard Row",
+      "line2": "",
+      "city": "Bellingham",
+      "state": "WA",
+      "postal_code": "98225",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00025"
+  },
+  "W00043": {
+    "order_id": "W00043",
+    "customer_id": "C0027",
+    "status": "delivered",
+    "placed_at": "2025-11-14T08:04:00Z",
+    "items": [
+      {
+        "sku": "P0015-02",
+        "product_id": "P0015",
+        "option": "olive",
+        "quantity": 1,
+        "unit_price": 158.0
+      },
+      {
+        "sku": "P0040-01",
+        "product_id": "P0040",
+        "option": "silver",
+        "quantity": 3,
+        "unit_price": 34.0
+      },
+      {
+        "sku": "P0002-02",
+        "product_id": "P0002",
+        "option": "M",
+        "quantity": 3,
+        "unit_price": 118.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1796 Ellsworth Ct",
+      "line2": "",
+      "city": "Portland",
+      "state": "OR",
+      "postal_code": "97214",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00026"
+  },
+  "W00044": {
+    "order_id": "W00044",
+    "customer_id": "C0021",
+    "status": "pending",
+    "placed_at": "2025-12-27T18:17:00Z",
+    "items": [
+      {
+        "sku": "P0004-02",
+        "product_id": "P0004",
+        "option": "M",
+        "quantity": 3,
+        "unit_price": 74.0
+      },
+      {
+        "sku": "P0021-02",
+        "product_id": "P0021",
+        "option": "linear",
+        "quantity": 1,
+        "unit_price": 149.0
+      },
+      {
+        "sku": "P0020-02",
+        "product_id": "P0020",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 349.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4553 Tanner Alley",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00045": {
+    "order_id": "W00045",
+    "customer_id": "C0021",
+    "status": "delivered",
+    "placed_at": "2025-12-19T13:17:00Z",
+    "items": [
+      {
+        "sku": "P0020-01",
+        "product_id": "P0020",
+        "option": "walnut",
+        "quantity": 1,
+        "unit_price": 349.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4553 Tanner Alley",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00027"
+  },
+  "W00046": {
+    "order_id": "W00046",
+    "customer_id": "C0018",
+    "status": "pending",
+    "placed_at": "2025-11-14T11:04:00Z",
+    "items": [
+      {
+        "sku": "P0009-02",
+        "product_id": "P0009",
+        "option": "matte-black",
+        "quantity": 1,
+        "unit_price": 268.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3504 Ellsworth Ct",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00047": {
+    "order_id": "W00047",
+    "customer_id": "C0004",
+    "status": "delivered",
+    "placed_at": "2026-01-08T20:17:00Z",
+    "items": [
+      {
+        "sku": "P0037-01",
+        "product_id": "P0037",
+        "option": "medium",
+        "quantity": 3,
+        "unit_price": 92.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3011 Marlowe St",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00028"
+  },
+  "W00048": {
+    "order_id": "W00048",
+    "customer_id": "C0019",
+    "status": "shipped",
+    "placed_at": "2026-01-08T18:17:00Z",
+    "items": [
+      {
+        "sku": "P0040-01",
+        "product_id": "P0040",
+        "option": "silver",
+        "quantity": 2,
+        "unit_price": 34.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1278 Cedar Hollow Dr",
+      "line2": "",
+      "city": "Burlington",
+      "state": "VT",
+      "postal_code": "05401",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00029"
+  },
+  "W00049": {
+    "order_id": "W00049",
+    "customer_id": "C0018",
+    "status": "shipped",
+    "placed_at": "2025-12-19T14:45:00Z",
+    "items": [
+      {
+        "sku": "P0009-02",
+        "product_id": "P0009",
+        "option": "matte-black",
+        "quantity": 3,
+        "unit_price": 268.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3504 Ellsworth Ct",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00030"
+  },
+  "W00050": {
+    "order_id": "W00050",
+    "customer_id": "C0018",
+    "status": "shipped",
+    "placed_at": "2025-12-11T20:17:00Z",
+    "items": [
+      {
+        "sku": "P0030-01",
+        "product_id": "P0030",
+        "option": "steel",
+        "quantity": 3,
+        "unit_price": 42.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3504 Ellsworth Ct",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00031"
+  },
+  "W00051": {
+    "order_id": "W00051",
+    "customer_id": "C0007",
+    "status": "processing",
+    "placed_at": "2025-12-27T10:45:00Z",
+    "items": [
+      {
+        "sku": "P0010-02",
+        "product_id": "P0010",
+        "option": "slate",
+        "quantity": 1,
+        "unit_price": 26.0
+      },
+      {
+        "sku": "P0005-01",
+        "product_id": "P0005",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 195.0
+      },
+      {
+        "sku": "P0013-02",
+        "product_id": "P0013",
+        "option": "king",
+        "quantity": 3,
+        "unit_price": 224.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1279 Foundry Way",
+      "line2": "",
+      "city": "Madison",
+      "state": "WI",
+      "postal_code": "53703",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00052": {
+    "order_id": "W00052",
+    "customer_id": "C0006",
+    "status": "delivered",
+    "placed_at": "2026-01-05T11:17:00Z",
+    "items": [
+      {
+        "sku": "P0010-02",
+        "product_id": "P0010",
+        "option": "slate",
+        "quantity": 1,
+        "unit_price": 26.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1936 Larkspur Ave",
+      "line2": "",
+      "city": "Missoula",
+      "state": "MT",
+      "postal_code": "59801",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00032"
+  },
+  "W00053": {
+    "order_id": "W00053",
+    "customer_id": "C0001",
+    "status": "shipped",
+    "placed_at": "2025-12-11T14:38:00Z",
+    "items": [
+      {
+        "sku": "P0032-01",
+        "product_id": "P0032",
+        "option": "moss",
+        "quantity": 1,
+        "unit_price": 112.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00033"
+  },
+  "W00054": {
+    "order_id": "W00054",
+    "customer_id": "C0029",
+    "status": "cancelled",
+    "placed_at": "2025-11-22T11:52:00Z",
+    "items": [
+      {
+        "sku": "P0026-05",
+        "product_id": "P0026",
+        "option": "12",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4421 Halyard Row",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-11-22T16:12:00Z",
+    "cancellation_reason": "no_longer_needed"
+  },
+  "W00055": {
+    "order_id": "W00055",
+    "customer_id": "C0017",
+    "status": "delivered",
+    "placed_at": "2025-12-19T13:52:00Z",
+    "items": [
+      {
+        "sku": "P0028-05",
+        "product_id": "P0028",
+        "option": "12",
+        "quantity": 3,
+        "unit_price": 245.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4131 Kestrel Dr",
+      "line2": "",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "postal_code": "48104",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00034"
+  },
+  "W00056": {
+    "order_id": "W00056",
+    "customer_id": "C0029",
+    "status": "delivered",
+    "placed_at": "2026-01-08T08:04:00Z",
+    "items": [
+      {
+        "sku": "P0004-02",
+        "product_id": "P0004",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 74.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4421 Halyard Row",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00035"
+  },
+  "W00057": {
+    "order_id": "W00057",
+    "customer_id": "C0011",
+    "status": "processing",
+    "placed_at": "2025-12-27T12:26:00Z",
+    "items": [
+      {
+        "sku": "P0013-02",
+        "product_id": "P0013",
+        "option": "king",
+        "quantity": 1,
+        "unit_price": 224.0
+      },
+      {
+        "sku": "P0033-01",
+        "product_id": "P0033",
+        "option": "regular",
+        "quantity": 2,
+        "unit_price": 164.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4393 Pemberton Pl",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00058": {
+    "order_id": "W00058",
+    "customer_id": "C0011",
+    "status": "cancelled",
+    "placed_at": "2025-12-03T11:52:00Z",
+    "items": [
+      {
+        "sku": "P0008-02",
+        "product_id": "P0008",
+        "option": "matte-black",
+        "quantity": 1,
+        "unit_price": 142.0
+      },
+      {
+        "sku": "P0020-02",
+        "product_id": "P0020",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 349.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "4393 Pemberton Pl",
+      "line2": "",
+      "city": "Boulder",
+      "state": "CO",
+      "postal_code": "80302",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-12-03T08:12:00Z",
+    "cancellation_reason": "defective_or_damaged"
+  },
+  "W00059": {
+    "order_id": "W00059",
+    "customer_id": "C0004",
+    "status": "cancelled",
+    "placed_at": "2025-11-22T12:45:00Z",
+    "items": [
+      {
+        "sku": "P0028-01",
+        "product_id": "P0028",
+        "option": "8",
+        "quantity": 1,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0027-02",
+        "product_id": "P0027",
+        "option": "9",
+        "quantity": 2,
+        "unit_price": 152.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3011 Marlowe St",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-11-22T17:12:00Z",
+    "cancellation_reason": "found_better_price"
+  },
+  "W00060": {
+    "order_id": "W00060",
+    "customer_id": "C0007",
+    "status": "pending",
+    "placed_at": "2026-01-02T13:04:00Z",
+    "items": [
+      {
+        "sku": "P0020-01",
+        "product_id": "P0020",
+        "option": "walnut",
+        "quantity": 1,
+        "unit_price": 349.0
+      },
+      {
+        "sku": "P0003-01",
+        "product_id": "P0003",
+        "option": "S",
+        "quantity": 3,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "1279 Foundry Way",
+      "line2": "",
+      "city": "Madison",
+      "state": "WI",
+      "postal_code": "53703",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00061": {
+    "order_id": "W00061",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2025-11-14T20:09:00Z",
+    "items": [
+      {
+        "sku": "P0008-01",
+        "product_id": "P0008",
+        "option": "brass",
+        "quantity": 2,
+        "unit_price": 142.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00062": {
+    "order_id": "W00062",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2026-01-02T17:21:00Z",
+    "items": [
+      {
+        "sku": "P0001-01",
+        "product_id": "P0001",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 89.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00036"
+  },
+  "W00063": {
+    "order_id": "W00063",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2025-11-22T16:21:00Z",
+    "items": [
+      {
+        "sku": "P0035-01",
+        "product_id": "P0035",
+        "option": "8in",
+        "quantity": 1,
+        "unit_price": 129.0
+      },
+      {
+        "sku": "P0040-02",
+        "product_id": "P0040",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 34.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00064": {
+    "order_id": "W00064",
+    "customer_id": "C0001",
+    "status": "returned",
+    "placed_at": "2025-11-22T17:48:00Z",
+    "items": [
+      {
+        "sku": "P0003-02",
+        "product_id": "P0003",
+        "option": "M",
+        "quantity": 2,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00037",
+    "returned_at": "2025-11-28T11:03:00Z"
+  },
+  "W00065": {
+    "order_id": "W00065",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2025-11-22T10:09:00Z",
+    "items": [
+      {
+        "sku": "P0010-03",
+        "product_id": "P0010",
+        "option": "moss",
+        "quantity": 1,
+        "unit_price": 26.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00066": {
+    "order_id": "W00066",
+    "customer_id": "C0001",
+    "status": "shipped",
+    "placed_at": "2026-01-02T09:21:00Z",
+    "items": [
+      {
+        "sku": "P0028-03",
+        "product_id": "P0028",
+        "option": "10",
+        "quantity": 1,
+        "unit_price": 245.0
+      },
+      {
+        "sku": "P0025-01",
+        "product_id": "P0025",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 39.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00038"
+  },
+  "W00067": {
+    "order_id": "W00067",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-11-22T09:33:00Z",
+    "items": [
+      {
+        "sku": "P0001-03",
+        "product_id": "P0001",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 89.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00039"
+  },
+  "W00068": {
+    "order_id": "W00068",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-12-19T11:48:00Z",
+    "items": [
+      {
+        "sku": "P0001-01",
+        "product_id": "P0001",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 89.0
+      },
+      {
+        "sku": "P0006-02",
+        "product_id": "P0006",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 82.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00040"
+  },
+  "W00069": {
+    "order_id": "W00069",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-11-14T09:09:00Z",
+    "items": [
+      {
+        "sku": "P0033-02",
+        "product_id": "P0033",
+        "option": "long",
+        "quantity": 2,
+        "unit_price": 164.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00041"
+  },
+  "W00070": {
+    "order_id": "W00070",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2026-01-13T09:09:00Z",
+    "items": [
+      {
+        "sku": "P0027-04",
+        "product_id": "P0027",
+        "option": "11",
+        "quantity": 1,
+        "unit_price": 152.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00042"
+  },
+  "W00071": {
+    "order_id": "W00071",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2026-01-02T10:09:00Z",
+    "items": [
+      {
+        "sku": "P0033-02",
+        "product_id": "P0033",
+        "option": "long",
+        "quantity": 1,
+        "unit_price": 164.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00072": {
+    "order_id": "W00072",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2026-01-08T13:09:00Z",
+    "items": [
+      {
+        "sku": "P0004-02",
+        "product_id": "P0004",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 74.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00073": {
+    "order_id": "W00073",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2025-12-03T17:33:00Z",
+    "items": [
+      {
+        "sku": "P0012-02",
+        "product_id": "P0012",
+        "option": "charcoal",
+        "quantity": 2,
+        "unit_price": 88.0
+      },
+      {
+        "sku": "P0003-02",
+        "product_id": "P0003",
+        "option": "M",
+        "quantity": 1,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00074": {
+    "order_id": "W00074",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-11-14T17:33:00Z",
+    "items": [
+      {
+        "sku": "P0021-01",
+        "product_id": "P0021",
+        "option": "tactile",
+        "quantity": 1,
+        "unit_price": 149.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00043"
+  },
+  "W00075": {
+    "order_id": "W00075",
+    "customer_id": "C0001",
+    "status": "returned",
+    "placed_at": "2026-01-02T13:21:00Z",
+    "items": [
+      {
+        "sku": "P0008-02",
+        "product_id": "P0008",
+        "option": "matte-black",
+        "quantity": 1,
+        "unit_price": 142.0
+      },
+      {
+        "sku": "P0026-01",
+        "product_id": "P0026",
+        "option": "8",
+        "quantity": 2,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00044",
+    "returned_at": "2026-01-11T11:03:00Z"
+  },
+  "W00076": {
+    "order_id": "W00076",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2026-01-05T09:48:00Z",
+    "items": [
+      {
+        "sku": "P0001-01",
+        "product_id": "P0001",
+        "option": "S",
+        "quantity": 1,
+        "unit_price": 89.0
+      },
+      {
+        "sku": "P0003-04",
+        "product_id": "P0003",
+        "option": "XL",
+        "quantity": 1,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00045"
+  },
+  "W00077": {
+    "order_id": "W00077",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2026-01-05T12:09:00Z",
+    "items": [
+      {
+        "sku": "P0021-02",
+        "product_id": "P0021",
+        "option": "linear",
+        "quantity": 2,
+        "unit_price": 149.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00046"
+  },
+  "W00078": {
+    "order_id": "W00078",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-11-22T14:21:00Z",
+    "items": [
+      {
+        "sku": "P0028-03",
+        "product_id": "P0028",
+        "option": "10",
+        "quantity": 2,
+        "unit_price": 245.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00047"
+  },
+  "W00079": {
+    "order_id": "W00079",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2025-12-19T08:48:00Z",
+    "items": [
+      {
+        "sku": "P0021-02",
+        "product_id": "P0021",
+        "option": "linear",
+        "quantity": 1,
+        "unit_price": 149.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00080": {
+    "order_id": "W00080",
+    "customer_id": "C0001",
+    "status": "processing",
+    "placed_at": "2025-12-19T08:48:00Z",
+    "items": [
+      {
+        "sku": "P0015-01",
+        "product_id": "P0015",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 158.0
+      },
+      {
+        "sku": "P0001-03",
+        "product_id": "P0001",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 89.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00081": {
+    "order_id": "W00081",
+    "customer_id": "C0001",
+    "status": "cancelled",
+    "placed_at": "2026-01-05T10:33:00Z",
+    "items": [
+      {
+        "sku": "P0026-03",
+        "product_id": "P0026",
+        "option": "10",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2026-01-05T12:12:00Z",
+    "cancellation_reason": "no_longer_needed"
+  },
+  "W00082": {
+    "order_id": "W00082",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-12-11T11:09:00Z",
+    "items": [
+      {
+        "sku": "P0005-03",
+        "product_id": "P0005",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 195.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00048"
+  },
+  "W00083": {
+    "order_id": "W00083",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2025-12-03T17:21:00Z",
+    "items": [
+      {
+        "sku": "P0009-02",
+        "product_id": "P0009",
+        "option": "matte-black",
+        "quantity": 1,
+        "unit_price": 268.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00049"
+  },
+  "W00084": {
+    "order_id": "W00084",
+    "customer_id": "C0001",
+    "status": "delivered",
+    "placed_at": "2026-01-13T17:48:00Z",
+    "items": [
+      {
+        "sku": "P0026-05",
+        "product_id": "P0026",
+        "option": "12",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "282 Larkspur Ave",
+      "line2": "",
+      "city": "Ithaca",
+      "state": "NY",
+      "postal_code": "14850",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00050"
+  },
+  "W00085": {
+    "order_id": "W00085",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-12-27T13:09:00Z",
+    "items": [
+      {
+        "sku": "P0026-04",
+        "product_id": "P0026",
+        "option": "11",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00051"
+  },
+  "W00086": {
+    "order_id": "W00086",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2026-01-08T15:21:00Z",
+    "items": [
+      {
+        "sku": "P0002-03",
+        "product_id": "P0002",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 118.0
+      },
+      {
+        "sku": "P0011-02",
+        "product_id": "P0011",
+        "option": "slate",
+        "quantity": 1,
+        "unit_price": 96.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00052"
+  },
+  "W00087": {
+    "order_id": "W00087",
+    "customer_id": "C0002",
+    "status": "cancelled",
+    "placed_at": "2025-11-14T11:48:00Z",
+    "items": [
+      {
+        "sku": "P0027-01",
+        "product_id": "P0027",
+        "option": "8",
+        "quantity": 1,
+        "unit_price": 152.0
+      },
+      {
+        "sku": "P0037-02",
+        "product_id": "P0037",
+        "option": "large",
+        "quantity": 1,
+        "unit_price": 92.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-11-14T18:12:00Z",
+    "cancellation_reason": "no_longer_needed"
+  },
+  "W00088": {
+    "order_id": "W00088",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-12-11T10:33:00Z",
+    "items": [
+      {
+        "sku": "P0006-03",
+        "product_id": "P0006",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 82.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00053"
+  },
+  "W00089": {
+    "order_id": "W00089",
+    "customer_id": "C0002",
+    "status": "returned",
+    "placed_at": "2025-12-11T14:48:00Z",
+    "items": [
+      {
+        "sku": "P0026-01",
+        "product_id": "P0026",
+        "option": "8",
+        "quantity": 1,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00054",
+    "returned_at": "2025-12-20T11:03:00Z"
+  },
+  "W00090": {
+    "order_id": "W00090",
+    "customer_id": "C0002",
+    "status": "shipped",
+    "placed_at": "2025-12-03T10:09:00Z",
+    "items": [
+      {
+        "sku": "P0001-03",
+        "product_id": "P0001",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 89.0
+      },
+      {
+        "sku": "P0002-03",
+        "product_id": "P0002",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 118.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00055"
+  },
+  "W00091": {
+    "order_id": "W00091",
+    "customer_id": "C0002",
+    "status": "returned",
+    "placed_at": "2026-01-11T12:21:00Z",
+    "items": [
+      {
+        "sku": "P0030-03",
+        "product_id": "P0030",
+        "option": "clay",
+        "quantity": 1,
+        "unit_price": 42.0
+      },
+      {
+        "sku": "P0029-04",
+        "product_id": "P0029",
+        "option": "11",
+        "quantity": 2,
+        "unit_price": 76.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00056",
+    "returned_at": "2026-01-20T11:03:00Z"
+  },
+  "W00092": {
+    "order_id": "W00092",
+    "customer_id": "C0002",
+    "status": "returned",
+    "placed_at": "2026-01-11T14:48:00Z",
+    "items": [
+      {
+        "sku": "P0029-03",
+        "product_id": "P0029",
+        "option": "10",
+        "quantity": 1,
+        "unit_price": 76.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00057",
+    "returned_at": "2026-01-20T11:03:00Z"
+  },
+  "W00093": {
+    "order_id": "W00093",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-11-22T08:09:00Z",
+    "items": [
+      {
+        "sku": "P0026-03",
+        "product_id": "P0026",
+        "option": "10",
+        "quantity": 2,
+        "unit_price": 138.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00058"
+  },
+  "W00094": {
+    "order_id": "W00094",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2026-01-11T17:33:00Z",
+    "items": [
+      {
+        "sku": "P0009-01",
+        "product_id": "P0009",
+        "option": "brass",
+        "quantity": 1,
+        "unit_price": 268.0
+      },
+      {
+        "sku": "P0032-01",
+        "product_id": "P0032",
+        "option": "moss",
+        "quantity": 1,
+        "unit_price": 112.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00059"
+  },
+  "W00095": {
+    "order_id": "W00095",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-12-03T15:09:00Z",
+    "items": [
+      {
+        "sku": "P0015-01",
+        "product_id": "P0015",
+        "option": "black",
+        "quantity": 1,
+        "unit_price": 158.0
+      },
+      {
+        "sku": "P0003-03",
+        "product_id": "P0003",
+        "option": "L",
+        "quantity": 1,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00060"
+  },
+  "W00096": {
+    "order_id": "W00096",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2026-01-02T12:48:00Z",
+    "items": [
+      {
+        "sku": "P0024-01",
+        "product_id": "P0024",
+        "option": "grey",
+        "quantity": 1,
+        "unit_price": 22.0
+      },
+      {
+        "sku": "P0028-05",
+        "product_id": "P0028",
+        "option": "12",
+        "quantity": 1,
+        "unit_price": 245.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00061"
+  },
+  "W00097": {
+    "order_id": "W00097",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-12-27T08:21:00Z",
+    "items": [
+      {
+        "sku": "P0021-02",
+        "product_id": "P0021",
+        "option": "linear",
+        "quantity": 2,
+        "unit_price": 149.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00062"
+  },
+  "W00098": {
+    "order_id": "W00098",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-11-14T12:33:00Z",
+    "items": [
+      {
+        "sku": "P0027-03",
+        "product_id": "P0027",
+        "option": "10",
+        "quantity": 1,
+        "unit_price": 152.0
+      },
+      {
+        "sku": "P0003-01",
+        "product_id": "P0003",
+        "option": "S",
+        "quantity": 2,
+        "unit_price": 168.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00063"
+  },
+  "W00099": {
+    "order_id": "W00099",
+    "customer_id": "C0002",
+    "status": "cancelled",
+    "placed_at": "2025-12-03T13:33:00Z",
+    "items": [
+      {
+        "sku": "P0024-02",
+        "product_id": "P0024",
+        "option": "black",
+        "quantity": 2,
+        "unit_price": 22.0
+      },
+      {
+        "sku": "P0030-03",
+        "product_id": "P0030",
+        "option": "clay",
+        "quantity": 1,
+        "unit_price": 42.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-12-03T14:12:00Z",
+    "cancellation_reason": "no_longer_needed"
+  },
+  "W00100": {
+    "order_id": "W00100",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-12-27T15:33:00Z",
+    "items": [
+      {
+        "sku": "P0019-02",
+        "product_id": "P0019",
+        "option": "sand",
+        "quantity": 2,
+        "unit_price": 179.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00064"
+  },
+  "W00101": {
+    "order_id": "W00101",
+    "customer_id": "C0002",
+    "status": "processing",
+    "placed_at": "2025-12-03T12:48:00Z",
+    "items": [
+      {
+        "sku": "P0012-01",
+        "product_id": "P0012",
+        "option": "oat",
+        "quantity": 1,
+        "unit_price": 88.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null
+  },
+  "W00102": {
+    "order_id": "W00102",
+    "customer_id": "C0002",
+    "status": "cancelled",
+    "placed_at": "2025-12-19T14:48:00Z",
+    "items": [
+      {
+        "sku": "P0006-04",
+        "product_id": "P0006",
+        "option": "XL",
+        "quantity": 1,
+        "unit_price": 82.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": null,
+    "cancelled_at": "2025-12-19T13:12:00Z",
+    "cancellation_reason": "no_longer_needed"
+  },
+  "W00103": {
+    "order_id": "W00103",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-12-11T16:09:00Z",
+    "items": [
+      {
+        "sku": "P0003-04",
+        "product_id": "P0003",
+        "option": "XL",
+        "quantity": 2,
+        "unit_price": 168.0
+      },
+      {
+        "sku": "P0030-02",
+        "product_id": "P0030",
+        "option": "sage",
+        "quantity": 1,
+        "unit_price": 42.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00065"
+  },
+  "W00104": {
+    "order_id": "W00104",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2026-01-05T14:21:00Z",
+    "items": [
+      {
+        "sku": "P0031-02",
+        "product_id": "P0031",
+        "option": "sage",
+        "quantity": 2,
+        "unit_price": 36.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00066"
+  },
+  "W00105": {
+    "order_id": "W00105",
+    "customer_id": "C0002",
+    "status": "delivered",
+    "placed_at": "2025-11-22T20:33:00Z",
+    "items": [
+      {
+        "sku": "P0041-01",
+        "product_id": "P0041",
+        "option": "tan",
+        "quantity": 1,
+        "unit_price": 62.0
+      },
+      {
+        "sku": "P0006-04",
+        "product_id": "P0006",
+        "option": "XL",
+        "quantity": 1,
+        "unit_price": 82.0
+      }
+    ],
+    "shipping_address": {
+      "address_id": "A001",
+      "line1": "3710 Foundry Way",
+      "line2": "",
+      "city": "Santa Fe",
+      "state": "NM",
+      "postal_code": "87501",
+      "country": "US"
+    },
+    "payment_method_id": "PM001",
+    "shipment_id": "S00067"
+  }
+}

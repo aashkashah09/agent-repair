@@ -1,0 +1,881 @@
+{
+  "C0001": {
+    "customer_id": "C0001",
+    "name": "Nadia Okafor",
+    "email": "nadia.okafor@example.com",
+    "phone": "+1-586-555-5650",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "282 Larkspur Ave",
+        "line2": "",
+        "city": "Ithaca",
+        "state": "NY",
+        "postal_code": "14850",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2742"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 5994"
+      }
+    ]
+  },
+  "C0002": {
+    "customer_id": "C0002",
+    "name": "Elliot Bramwell",
+    "email": "elliot.bramwell@example.com",
+    "phone": "+1-938-555-4330",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "3710 Foundry Way",
+        "line2": "",
+        "city": "Santa Fe",
+        "state": "NM",
+        "postal_code": "87501",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 3978"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Mastercard ending 4405"
+      }
+    ]
+  },
+  "C0003": {
+    "customer_id": "C0003",
+    "name": "Priya Rana",
+    "email": "priya.rana@example.com",
+    "phone": "+1-293-555-2205",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1808 Birchwood Ln",
+        "line2": "",
+        "city": "Boulder",
+        "state": "CO",
+        "postal_code": "80302",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2935 Birchwood Ln",
+        "line2": "Suite 200",
+        "city": "Bellingham",
+        "state": "WA",
+        "postal_code": "98225",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 3168"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 8535"
+      }
+    ]
+  },
+  "C0004": {
+    "customer_id": "C0004",
+    "name": "Marcus Delgado",
+    "email": "marcus.delgado@example.com",
+    "phone": "+1-338-555-8481",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "3011 Marlowe St",
+        "line2": "",
+        "city": "Santa Fe",
+        "state": "NM",
+        "postal_code": "87501",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 1557"
+      }
+    ]
+  },
+  "C0005": {
+    "customer_id": "C0005",
+    "name": "Ingrid Halvorsen",
+    "email": "ingrid.halvorsen@example.com",
+    "phone": "+1-714-555-3076",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1222 Tanner Alley",
+        "line2": "",
+        "city": "Boulder",
+        "state": "CO",
+        "postal_code": "80302",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 4421"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Mastercard ending 4379"
+      }
+    ]
+  },
+  "C0006": {
+    "customer_id": "C0006",
+    "name": "Tom\u00e1s Cruz",
+    "email": "tomas.cruz@example.com",
+    "phone": "+1-933-555-7807",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1936 Larkspur Ave",
+        "line2": "",
+        "city": "Missoula",
+        "state": "MT",
+        "postal_code": "59801",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2944 Quarry Rd",
+        "line2": "Apt 3B",
+        "city": "Bellingham",
+        "state": "WA",
+        "postal_code": "98225",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 6775"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Mastercard ending 8465"
+      }
+    ]
+  },
+  "C0007": {
+    "customer_id": "C0007",
+    "name": "Hazel Mbeki",
+    "email": "hazel.mbeki@example.com",
+    "phone": "+1-986-555-5544",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1279 Foundry Way",
+        "line2": "",
+        "city": "Madison",
+        "state": "WI",
+        "postal_code": "53703",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "1939 Birchwood Ln",
+        "line2": "",
+        "city": "Madison",
+        "state": "WI",
+        "postal_code": "53703",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 6249"
+      }
+    ]
+  },
+  "C0008": {
+    "customer_id": "C0008",
+    "name": "Devon Whitfield",
+    "email": "devon.whitfield@example.com",
+    "phone": "+1-983-555-6426",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "4528 Tanner Alley",
+        "line2": "",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postal_code": "48104",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 6795"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 4127"
+      }
+    ]
+  },
+  "C0009": {
+    "customer_id": "C0009",
+    "name": "Ruth Ainsley",
+    "email": "ruth.ainsley@example.com",
+    "phone": "+1-772-555-8966",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1912 Tanner Alley",
+        "line2": "",
+        "city": "Burlington",
+        "state": "VT",
+        "postal_code": "05401",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2515 Tanner Alley",
+        "line2": "",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02906",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 3094"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 9572"
+      }
+    ]
+  },
+  "C0010": {
+    "customer_id": "C0010",
+    "name": "Owen Novak",
+    "email": "owen.novak@example.com",
+    "phone": "+1-463-555-5369",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1805 Tanner Alley",
+        "line2": "",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postal_code": "48104",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 7225"
+      }
+    ]
+  },
+  "C0011": {
+    "customer_id": "C0011",
+    "name": "Saoirse Quill",
+    "email": "saoirse.quill@example.com",
+    "phone": "+1-905-555-5121",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "4393 Pemberton Pl",
+        "line2": "",
+        "city": "Boulder",
+        "state": "CO",
+        "postal_code": "80302",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2737 Birchwood Ln",
+        "line2": "Apt 3B",
+        "city": "Providence",
+        "state": "RI",
+        "postal_code": "02906",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 3605"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 2747"
+      }
+    ]
+  },
+  "C0012": {
+    "customer_id": "C0012",
+    "name": "Kenji Tanaka",
+    "email": "kenji.tanaka@example.com",
+    "phone": "+1-618-555-8884",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "3807 Larkspur Ave",
+        "line2": "",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postal_code": "48104",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2774 Kestrel Dr",
+        "line2": "Apt 3B",
+        "city": "Burlington",
+        "state": "VT",
+        "postal_code": "05401",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 3100"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Mastercard ending 6172"
+      }
+    ]
+  },
+  "C0013": {
+    "customer_id": "C0013",
+    "name": "Amara Osei",
+    "email": "amara.osei@example.com",
+    "phone": "+1-664-555-4766",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "561 Quarry Rd",
+        "line2": "",
+        "city": "Savannah",
+        "state": "GA",
+        "postal_code": "31401",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "3489 Birchwood Ln",
+        "line2": "Apt 3B",
+        "city": "Asheville",
+        "state": "NC",
+        "postal_code": "28801",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2535"
+      }
+    ]
+  },
+  "C0014": {
+    "customer_id": "C0014",
+    "name": "Felix Lindqvist",
+    "email": "felix.lindqvist@example.com",
+    "phone": "+1-660-555-6212",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1397 Birchwood Ln",
+        "line2": "",
+        "city": "Missoula",
+        "state": "MT",
+        "postal_code": "59801",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 6227"
+      }
+    ]
+  },
+  "C0015": {
+    "customer_id": "C0015",
+    "name": "Noor Haddad",
+    "email": "noor.haddad@example.com",
+    "phone": "+1-600-555-8193",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "267 Quarry Rd",
+        "line2": "",
+        "city": "Ithaca",
+        "state": "NY",
+        "postal_code": "14850",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2547 Marlowe St",
+        "line2": "",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postal_code": "48104",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 3037"
+      }
+    ]
+  },
+  "C0016": {
+    "customer_id": "C0016",
+    "name": "Gideon Fournier",
+    "email": "gideon.fournier@example.com",
+    "phone": "+1-310-555-9624",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "413 Halyard Row",
+        "line2": "",
+        "city": "Bellingham",
+        "state": "WA",
+        "postal_code": "98225",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 7906"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 4017"
+      }
+    ]
+  },
+  "C0017": {
+    "customer_id": "C0017",
+    "name": "Yara Bassett",
+    "email": "yara.bassett@example.com",
+    "phone": "+1-954-555-9980",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "4131 Kestrel Dr",
+        "line2": "",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postal_code": "48104",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 5743"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Mastercard ending 7132"
+      }
+    ]
+  },
+  "C0018": {
+    "customer_id": "C0018",
+    "name": "Callum Moreau",
+    "email": "callum.moreau@example.com",
+    "phone": "+1-517-555-9426",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "3504 Ellsworth Ct",
+        "line2": "",
+        "city": "Boulder",
+        "state": "CO",
+        "postal_code": "80302",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2609"
+      }
+    ]
+  },
+  "C0019": {
+    "customer_id": "C0019",
+    "name": "Bea Sandoval",
+    "email": "bea.sandoval@example.com",
+    "phone": "+1-698-555-8568",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1278 Cedar Hollow Dr",
+        "line2": "",
+        "city": "Burlington",
+        "state": "VT",
+        "postal_code": "05401",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 8210"
+      }
+    ]
+  },
+  "C0020": {
+    "customer_id": "C0020",
+    "name": "Rafael Ferrante",
+    "email": "rafael.ferrante@example.com",
+    "phone": "+1-215-555-6138",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "3748 Wren Street",
+        "line2": "",
+        "city": "Missoula",
+        "state": "MT",
+        "postal_code": "59801",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 8646"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 1952"
+      }
+    ]
+  },
+  "C0021": {
+    "customer_id": "C0021",
+    "name": "Simone Vogel",
+    "email": "simone.vogel@example.com",
+    "phone": "+1-306-555-3653",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "4553 Tanner Alley",
+        "line2": "",
+        "city": "Santa Fe",
+        "state": "NM",
+        "postal_code": "87501",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 4016"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Mastercard ending 2905"
+      }
+    ]
+  },
+  "C0022": {
+    "customer_id": "C0022",
+    "name": "Anton Kowalski",
+    "email": "anton.kowalski@example.com",
+    "phone": "+1-389-555-9199",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "390 Marlowe St",
+        "line2": "",
+        "city": "Boulder",
+        "state": "CO",
+        "postal_code": "80302",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2030 Pemberton Pl",
+        "line2": "Unit 12",
+        "city": "Madison",
+        "state": "WI",
+        "postal_code": "53703",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 7086"
+      }
+    ]
+  },
+  "C0023": {
+    "customer_id": "C0023",
+    "name": "Leila Nkemdirim",
+    "email": "leila.nkemdirim@example.com",
+    "phone": "+1-586-555-5867",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "2897 Tanner Alley",
+        "line2": "",
+        "city": "Bellingham",
+        "state": "WA",
+        "postal_code": "98225",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 1767"
+      }
+    ]
+  },
+  "C0024": {
+    "customer_id": "C0024",
+    "name": "Whitney Ashworth",
+    "email": "whitney.ashworth@example.com",
+    "phone": "+1-790-555-6378",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "480 Tanner Alley",
+        "line2": "",
+        "city": "Savannah",
+        "state": "GA",
+        "postal_code": "31401",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2692 Pemberton Pl",
+        "line2": "",
+        "city": "Asheville",
+        "state": "NC",
+        "postal_code": "28801",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2189"
+      }
+    ]
+  },
+  "C0025": {
+    "customer_id": "C0025",
+    "name": "Emeka Petrov",
+    "email": "emeka.petrov@example.com",
+    "phone": "+1-599-555-2350",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "2203 Pemberton Pl",
+        "line2": "",
+        "city": "Burlington",
+        "state": "VT",
+        "postal_code": "05401",
+        "country": "US"
+      },
+      {
+        "address_id": "A002",
+        "line1": "2064 Birchwood Ln",
+        "line2": "Unit 12",
+        "city": "Boulder",
+        "state": "CO",
+        "postal_code": "80302",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2503"
+      }
+    ]
+  },
+  "C0026": {
+    "customer_id": "C0026",
+    "name": "Talia Cardoso",
+    "email": "talia.cardoso@example.com",
+    "phone": "+1-655-555-4517",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "2790 Halyard Row",
+        "line2": "",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postal_code": "48104",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2642"
+      }
+    ]
+  },
+  "C0027": {
+    "customer_id": "C0027",
+    "name": "Bram Ludwig",
+    "email": "bram.ludwig@example.com",
+    "phone": "+1-606-555-8130",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1796 Ellsworth Ct",
+        "line2": "",
+        "city": "Portland",
+        "state": "OR",
+        "postal_code": "97214",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 7392"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 1314"
+      }
+    ]
+  },
+  "C0028": {
+    "customer_id": "C0028",
+    "name": "Josefina Marchetti",
+    "email": "josefina.marchetti@example.com",
+    "phone": "+1-299-555-6390",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "1345 Larkspur Ave",
+        "line2": "",
+        "city": "Missoula",
+        "state": "MT",
+        "postal_code": "59801",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 9428"
+      }
+    ]
+  },
+  "C0029": {
+    "customer_id": "C0029",
+    "name": "Casper Beauchamp",
+    "email": "casper.beauchamp@example.com",
+    "phone": "+1-510-555-4603",
+    "membership": "standard",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "4421 Halyard Row",
+        "line2": "",
+        "city": "Santa Fe",
+        "state": "NM",
+        "postal_code": "87501",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 2338"
+      },
+      {
+        "payment_method_id": "PM002",
+        "label": "Amex ending 1847"
+      }
+    ]
+  },
+  "C0030": {
+    "customer_id": "C0030",
+    "name": "Mira Sorensen",
+    "email": "mira.sorensen@example.com",
+    "phone": "+1-254-555-4711",
+    "membership": "plus",
+    "addresses": [
+      {
+        "address_id": "A001",
+        "line1": "957 Quarry Rd",
+        "line2": "",
+        "city": "Santa Fe",
+        "state": "NM",
+        "postal_code": "87501",
+        "country": "US"
+      }
+    ],
+    "payment_methods": [
+      {
+        "payment_method_id": "PM001",
+        "label": "Visa ending 8863"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "R00001": {
+    "refund_id": "R00001",
+    "order_id": "W00017",
+    "amount": 206.0,
+    "method": "original_payment",
+    "issued_at": "2026-01-07T09:41:00Z"
+  },
+  "R00002": {
+    "refund_id": "R00002",
+    "order_id": "W00025",
+    "amount": 82.0,
+    "method": "store_credit",
+    "issued_at": "2025-12-21T09:41:00Z"
+  },
+  "R00003": {
+    "refund_id": "R00003",
+    "order_id": "W00026",
+    "amount": 48.0,
+    "method": "original_payment",
+    "issued_at": "2025-11-24T09:41:00Z"
+  },
+  "R00004": {
+    "refund_id": "R00004",
+    "order_id": "W00027",
+    "amount": 526.0,
+    "method": "store_credit",
+    "issued_at": "2026-01-07T09:41:00Z"
+  },
+  "R00005": {
+    "refund_id": "R00005",
+    "order_id": "W00038",
+    "amount": 624.0,
+    "method": "original_payment",
+    "issued_at": "2026-01-17T09:41:00Z"
+  },
+  "R00006": {
+    "refund_id": "R00006",
+    "order_id": "W00054",
+    "amount": 138.0,
+    "method": "original_payment",
+    "issued_at": "2025-11-24T09:41:00Z"
+  },
+  "R00007": {
+    "refund_id": "R00007",
+    "order_id": "W00058",
+    "amount": 491.0,
+    "method": "original_payment",
+    "issued_at": "2025-12-05T09:41:00Z"
+  }
+}

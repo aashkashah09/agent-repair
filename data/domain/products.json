@@ -1,0 +1,473 @@
+{
+  "P0001": {
+    "product_id": "P0001",
+    "name": "Aster Merino Crew",
+    "category": "apparel",
+    "description": "Fine-gauge merino crewneck sweater, machine washable.",
+    "price": 89.0,
+    "skus": [
+      "P0001-01",
+      "P0001-02",
+      "P0001-03",
+      "P0001-04"
+    ]
+  },
+  "P0002": {
+    "product_id": "P0002",
+    "name": "Aster Merino Half-Zip",
+    "category": "apparel",
+    "description": "Merino half-zip pullover with ribbed collar.",
+    "price": 118.0,
+    "skus": [
+      "P0002-01",
+      "P0002-02",
+      "P0002-03",
+      "P0002-04"
+    ]
+  },
+  "P0003": {
+    "product_id": "P0003",
+    "name": "Fieldstone Chore Jacket",
+    "category": "apparel",
+    "description": "Waxed cotton chore jacket with corduroy collar.",
+    "price": 168.0,
+    "skus": [
+      "P0003-01",
+      "P0003-02",
+      "P0003-03",
+      "P0003-04"
+    ]
+  },
+  "P0004": {
+    "product_id": "P0004",
+    "name": "Fieldstone Oxford Shirt",
+    "category": "apparel",
+    "description": "Long-staple cotton oxford, button-down collar.",
+    "price": 74.0,
+    "skus": [
+      "P0004-01",
+      "P0004-02",
+      "P0004-03",
+      "P0004-04"
+    ]
+  },
+  "P0005": {
+    "product_id": "P0005",
+    "name": "Harbor Rain Shell",
+    "category": "apparel",
+    "description": "Three-layer waterproof shell with taped seams.",
+    "price": 195.0,
+    "skus": [
+      "P0005-01",
+      "P0005-02",
+      "P0005-03"
+    ]
+  },
+  "P0006": {
+    "product_id": "P0006",
+    "name": "Trailhead Fleece Vest",
+    "category": "apparel",
+    "description": "Recycled grid fleece vest with zip hand pockets.",
+    "price": 82.0,
+    "skus": [
+      "P0006-01",
+      "P0006-02",
+      "P0006-03",
+      "P0006-04"
+    ]
+  },
+  "P0007": {
+    "product_id": "P0007",
+    "name": "Basin Wool Socks 3-Pack",
+    "category": "apparel",
+    "description": "Cushioned merino blend crew socks, three pairs.",
+    "price": 34.0,
+    "skus": [
+      "P0007-01",
+      "P0007-02"
+    ]
+  },
+  "P0008": {
+    "product_id": "P0008",
+    "name": "Calder Desk Lamp",
+    "category": "home",
+    "description": "Articulating brass desk lamp with dimmable LED head.",
+    "price": 142.0,
+    "skus": [
+      "P0008-01",
+      "P0008-02"
+    ]
+  },
+  "P0009": {
+    "product_id": "P0009",
+    "name": "Calder Floor Lamp",
+    "category": "home",
+    "description": "Adjustable floor lamp with linen shade.",
+    "price": 268.0,
+    "skus": [
+      "P0009-01",
+      "P0009-02"
+    ]
+  },
+  "P0010": {
+    "product_id": "P0010",
+    "name": "Marrow Ceramic Mug",
+    "category": "home",
+    "description": "Stoneware mug with reactive glaze, 12 oz.",
+    "price": 26.0,
+    "skus": [
+      "P0010-01",
+      "P0010-02",
+      "P0010-03"
+    ]
+  },
+  "P0011": {
+    "product_id": "P0011",
+    "name": "Marrow Dinner Plate Set",
+    "category": "home",
+    "description": "Four stoneware dinner plates, dishwasher safe.",
+    "price": 96.0,
+    "skus": [
+      "P0011-01",
+      "P0011-02"
+    ]
+  },
+  "P0012": {
+    "product_id": "P0012",
+    "name": "Loom Waffle Throw",
+    "category": "home",
+    "description": "Cotton waffle-weave throw blanket, 50x70.",
+    "price": 88.0,
+    "skus": [
+      "P0012-01",
+      "P0012-02",
+      "P0012-03"
+    ]
+  },
+  "P0013": {
+    "product_id": "P0013",
+    "name": "Loom Linen Duvet Cover",
+    "category": "home",
+    "description": "Stonewashed linen duvet cover with corner ties.",
+    "price": 224.0,
+    "skus": [
+      "P0013-01",
+      "P0013-02"
+    ]
+  },
+  "P0014": {
+    "product_id": "P0014",
+    "name": "Pitchfork Cast Skillet",
+    "category": "home",
+    "description": "Pre-seasoned 10-inch cast iron skillet.",
+    "price": 79.0,
+    "skus": [
+      "P0014-01",
+      "P0014-02"
+    ]
+  },
+  "P0015": {
+    "product_id": "P0015",
+    "name": "Meridian Backpack 22L",
+    "category": "bags",
+    "description": "Water-resistant daypack with padded laptop sleeve.",
+    "price": 158.0,
+    "skus": [
+      "P0015-01",
+      "P0015-02",
+      "P0015-03"
+    ]
+  },
+  "P0016": {
+    "product_id": "P0016",
+    "name": "Meridian Duffel 40L",
+    "category": "bags",
+    "description": "Cabin-sized duffel with removable shoulder strap.",
+    "price": 186.0,
+    "skus": [
+      "P0016-01",
+      "P0016-02"
+    ]
+  },
+  "P0017": {
+    "product_id": "P0017",
+    "name": "Ferry Tote",
+    "category": "bags",
+    "description": "Heavyweight canvas tote with interior pocket.",
+    "price": 94.0,
+    "skus": [
+      "P0017-01",
+      "P0017-02"
+    ]
+  },
+  "P0018": {
+    "product_id": "P0018",
+    "name": "Pocketbook Sling",
+    "category": "bags",
+    "description": "Compact crossbody sling with magnetic closure.",
+    "price": 68.0,
+    "skus": [
+      "P0018-01",
+      "P0018-02"
+    ]
+  },
+  "P0019": {
+    "product_id": "P0019",
+    "name": "Northbeam Bluetooth Speaker",
+    "category": "electronics",
+    "description": "Portable speaker with 18-hour battery and IPX7 rating.",
+    "price": 179.0,
+    "skus": [
+      "P0019-01",
+      "P0019-02"
+    ]
+  },
+  "P0020": {
+    "product_id": "P0020",
+    "name": "Northbeam Desk Speaker Pair",
+    "category": "electronics",
+    "description": "Powered bookshelf speakers with USB-C input.",
+    "price": 349.0,
+    "skus": [
+      "P0020-01",
+      "P0020-02"
+    ]
+  },
+  "P0021": {
+    "product_id": "P0021",
+    "name": "Quill Mechanical Keyboard",
+    "category": "electronics",
+    "description": "65% hot-swappable keyboard with PBT keycaps.",
+    "price": 149.0,
+    "skus": [
+      "P0021-01",
+      "P0021-02"
+    ]
+  },
+  "P0022": {
+    "product_id": "P0022",
+    "name": "Quill Wireless Mouse",
+    "category": "electronics",
+    "description": "Low-latency wireless mouse with 70-day battery.",
+    "price": 79.0,
+    "skus": [
+      "P0022-01",
+      "P0022-02"
+    ]
+  },
+  "P0023": {
+    "product_id": "P0023",
+    "name": "Lantern USB-C Charger 65W",
+    "category": "electronics",
+    "description": "Dual-port GaN charger with foldable prongs.",
+    "price": 54.0,
+    "skus": [
+      "P0023-01",
+      "P0023-02"
+    ]
+  },
+  "P0024": {
+    "product_id": "P0024",
+    "name": "Lantern Braided Cable 2m",
+    "category": "electronics",
+    "description": "USB-C to USB-C cable rated for 100W.",
+    "price": 22.0,
+    "skus": [
+      "P0024-01",
+      "P0024-02"
+    ]
+  },
+  "P0025": {
+    "product_id": "P0025",
+    "name": "Sightline Reading Light",
+    "category": "electronics",
+    "description": "Clip-on rechargeable reading light, three temperatures.",
+    "price": 39.0,
+    "skus": [
+      "P0025-01"
+    ]
+  },
+  "P0026": {
+    "product_id": "P0026",
+    "name": "Ridgeline Trail Runner",
+    "category": "footwear",
+    "description": "Cushioned trail running shoe with rock plate.",
+    "price": 138.0,
+    "skus": [
+      "P0026-01",
+      "P0026-02",
+      "P0026-03",
+      "P0026-04",
+      "P0026-05"
+    ]
+  },
+  "P0027": {
+    "product_id": "P0027",
+    "name": "Ridgeline Approach Shoe",
+    "category": "footwear",
+    "description": "Sticky-rubber approach shoe with reinforced toe.",
+    "price": 152.0,
+    "skus": [
+      "P0027-01",
+      "P0027-02",
+      "P0027-03",
+      "P0027-04"
+    ]
+  },
+  "P0028": {
+    "product_id": "P0028",
+    "name": "Cobble Leather Boot",
+    "category": "footwear",
+    "description": "Goodyear-welted leather boot with Vibram sole.",
+    "price": 245.0,
+    "skus": [
+      "P0028-01",
+      "P0028-02",
+      "P0028-03",
+      "P0028-04",
+      "P0028-05"
+    ]
+  },
+  "P0029": {
+    "product_id": "P0029",
+    "name": "Dockside Canvas Sneaker",
+    "category": "footwear",
+    "description": "Vulcanised canvas sneaker with cotton laces.",
+    "price": 76.0,
+    "skus": [
+      "P0029-01",
+      "P0029-02",
+      "P0029-03",
+      "P0029-04"
+    ]
+  },
+  "P0030": {
+    "product_id": "P0030",
+    "name": "Granite Water Bottle 750ml",
+    "category": "outdoor",
+    "description": "Insulated stainless bottle, keeps cold 24 hours.",
+    "price": 42.0,
+    "skus": [
+      "P0030-01",
+      "P0030-02",
+      "P0030-03"
+    ]
+  },
+  "P0031": {
+    "product_id": "P0031",
+    "name": "Granite Travel Tumbler",
+    "category": "outdoor",
+    "description": "Leakproof insulated tumbler with slide lid.",
+    "price": 36.0,
+    "skus": [
+      "P0031-01",
+      "P0031-02"
+    ]
+  },
+  "P0032": {
+    "product_id": "P0032",
+    "name": "Switchback Camp Chair",
+    "category": "outdoor",
+    "description": "Packable aluminium camp chair, 2.1 lb.",
+    "price": 112.0,
+    "skus": [
+      "P0032-01",
+      "P0032-02"
+    ]
+  },
+  "P0033": {
+    "product_id": "P0033",
+    "name": "Switchback Sleeping Pad",
+    "category": "outdoor",
+    "description": "Insulated inflatable pad, R-value 4.2.",
+    "price": 164.0,
+    "skus": [
+      "P0033-01",
+      "P0033-02"
+    ]
+  },
+  "P0034": {
+    "product_id": "P0034",
+    "name": "Beacon Headlamp",
+    "category": "outdoor",
+    "description": "Rechargeable 400-lumen headlamp with red mode.",
+    "price": 58.0,
+    "skus": [
+      "P0034-01"
+    ]
+  },
+  "P0035": {
+    "product_id": "P0035",
+    "name": "Foundry Chef Knife 8in",
+    "category": "kitchen",
+    "description": "High-carbon stainless chef knife with pakkawood handle.",
+    "price": 129.0,
+    "skus": [
+      "P0035-01"
+    ]
+  },
+  "P0036": {
+    "product_id": "P0036",
+    "name": "Foundry Paring Knife",
+    "category": "kitchen",
+    "description": "Three-and-a-half inch paring knife.",
+    "price": 58.0,
+    "skus": [
+      "P0036-01"
+    ]
+  },
+  "P0037": {
+    "product_id": "P0037",
+    "name": "Foundry Cutting Board",
+    "category": "kitchen",
+    "description": "End-grain maple board with juice groove.",
+    "price": 92.0,
+    "skus": [
+      "P0037-01",
+      "P0037-02"
+    ]
+  },
+  "P0038": {
+    "product_id": "P0038",
+    "name": "Kettle Pour-Over Set",
+    "category": "kitchen",
+    "description": "Gooseneck kettle with glass brewer and filters.",
+    "price": 118.0,
+    "skus": [
+      "P0038-01"
+    ]
+  },
+  "P0039": {
+    "product_id": "P0039",
+    "name": "Almanac Notebook A5",
+    "category": "stationery",
+    "description": "Dot-grid notebook, 192 pages, lay-flat binding.",
+    "price": 28.0,
+    "skus": [
+      "P0039-01",
+      "P0039-02"
+    ]
+  },
+  "P0040": {
+    "product_id": "P0040",
+    "name": "Almanac Pen",
+    "category": "stationery",
+    "description": "Machined aluminium pen with 0.5mm refill.",
+    "price": 34.0,
+    "skus": [
+      "P0040-01",
+      "P0040-02"
+    ]
+  },
+  "P0041": {
+    "product_id": "P0041",
+    "name": "Almanac Desk Pad",
+    "category": "stationery",
+    "description": "Vegetable-tanned leather desk pad, 24x14.",
+    "price": 62.0,
+    "skus": [
+      "P0041-01",
+      "P0041-02"
+    ]
+  }
+}

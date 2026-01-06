@@ -1,0 +1,818 @@
+{
+  "P0001-01": {
+    "sku": "P0001-01",
+    "product_id": "P0001",
+    "option": "S",
+    "available": 12,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0001-02": {
+    "sku": "P0001-02",
+    "product_id": "P0001",
+    "option": "M",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-16"
+  },
+  "P0001-03": {
+    "sku": "P0001-03",
+    "product_id": "P0001",
+    "option": "L",
+    "available": 24,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0001-04": {
+    "sku": "P0001-04",
+    "product_id": "P0001",
+    "option": "XL",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0002-01": {
+    "sku": "P0002-01",
+    "product_id": "P0002",
+    "option": "S",
+    "available": 31,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0002-02": {
+    "sku": "P0002-02",
+    "product_id": "P0002",
+    "option": "M",
+    "available": 24,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0002-03": {
+    "sku": "P0002-03",
+    "product_id": "P0002",
+    "option": "L",
+    "available": 4,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0002-04": {
+    "sku": "P0002-04",
+    "product_id": "P0002",
+    "option": "XL",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0003-01": {
+    "sku": "P0003-01",
+    "product_id": "P0003",
+    "option": "S",
+    "available": 2,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0003-02": {
+    "sku": "P0003-02",
+    "product_id": "P0003",
+    "option": "M",
+    "available": 9,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0003-03": {
+    "sku": "P0003-03",
+    "product_id": "P0003",
+    "option": "L",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-09"
+  },
+  "P0003-04": {
+    "sku": "P0003-04",
+    "product_id": "P0003",
+    "option": "XL",
+    "available": 12,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0004-01": {
+    "sku": "P0004-01",
+    "product_id": "P0004",
+    "option": "S",
+    "available": 9,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0004-02": {
+    "sku": "P0004-02",
+    "product_id": "P0004",
+    "option": "M",
+    "available": 15,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0004-03": {
+    "sku": "P0004-03",
+    "product_id": "P0004",
+    "option": "L",
+    "available": 40,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0004-04": {
+    "sku": "P0004-04",
+    "product_id": "P0004",
+    "option": "XL",
+    "available": 6,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0005-01": {
+    "sku": "P0005-01",
+    "product_id": "P0005",
+    "option": "S",
+    "available": 40,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0005-02": {
+    "sku": "P0005-02",
+    "product_id": "P0005",
+    "option": "M",
+    "available": 6,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0005-03": {
+    "sku": "P0005-03",
+    "product_id": "P0005",
+    "option": "L",
+    "available": 4,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0006-01": {
+    "sku": "P0006-01",
+    "product_id": "P0006",
+    "option": "S",
+    "available": 40,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0006-02": {
+    "sku": "P0006-02",
+    "product_id": "P0006",
+    "option": "M",
+    "available": 0,
+    "reserved": 3,
+    "restock_eta": "2026-02-16"
+  },
+  "P0006-03": {
+    "sku": "P0006-03",
+    "product_id": "P0006",
+    "option": "L",
+    "available": 0,
+    "reserved": 3,
+    "restock_eta": "2026-02-16"
+  },
+  "P0006-04": {
+    "sku": "P0006-04",
+    "product_id": "P0006",
+    "option": "XL",
+    "available": 31,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0007-01": {
+    "sku": "P0007-01",
+    "product_id": "P0007",
+    "option": "M",
+    "available": 24,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0007-02": {
+    "sku": "P0007-02",
+    "product_id": "P0007",
+    "option": "L",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0008-01": {
+    "sku": "P0008-01",
+    "product_id": "P0008",
+    "option": "brass",
+    "available": 15,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0008-02": {
+    "sku": "P0008-02",
+    "product_id": "P0008",
+    "option": "matte-black",
+    "available": 18,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0009-01": {
+    "sku": "P0009-01",
+    "product_id": "P0009",
+    "option": "brass",
+    "available": 18,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0009-02": {
+    "sku": "P0009-02",
+    "product_id": "P0009",
+    "option": "matte-black",
+    "available": 40,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0010-01": {
+    "sku": "P0010-01",
+    "product_id": "P0010",
+    "option": "sand",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0010-02": {
+    "sku": "P0010-02",
+    "product_id": "P0010",
+    "option": "slate",
+    "available": 2,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0010-03": {
+    "sku": "P0010-03",
+    "product_id": "P0010",
+    "option": "moss",
+    "available": 24,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0011-01": {
+    "sku": "P0011-01",
+    "product_id": "P0011",
+    "option": "sand",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-16"
+  },
+  "P0011-02": {
+    "sku": "P0011-02",
+    "product_id": "P0011",
+    "option": "slate",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-02"
+  },
+  "P0012-01": {
+    "sku": "P0012-01",
+    "product_id": "P0012",
+    "option": "oat",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0012-02": {
+    "sku": "P0012-02",
+    "product_id": "P0012",
+    "option": "charcoal",
+    "available": 0,
+    "reserved": 3,
+    "restock_eta": "2026-02-02"
+  },
+  "P0012-03": {
+    "sku": "P0012-03",
+    "product_id": "P0012",
+    "option": "rust",
+    "available": 4,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0013-01": {
+    "sku": "P0013-01",
+    "product_id": "P0013",
+    "option": "queen",
+    "available": 4,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0013-02": {
+    "sku": "P0013-02",
+    "product_id": "P0013",
+    "option": "king",
+    "available": 18,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0014-01": {
+    "sku": "P0014-01",
+    "product_id": "P0014",
+    "option": "10in",
+    "available": 6,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0014-02": {
+    "sku": "P0014-02",
+    "product_id": "P0014",
+    "option": "12in",
+    "available": 0,
+    "reserved": 0,
+    "restock_eta": "2026-02-09"
+  },
+  "P0015-01": {
+    "sku": "P0015-01",
+    "product_id": "P0015",
+    "option": "black",
+    "available": 24,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0015-02": {
+    "sku": "P0015-02",
+    "product_id": "P0015",
+    "option": "olive",
+    "available": 6,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0015-03": {
+    "sku": "P0015-03",
+    "product_id": "P0015",
+    "option": "navy",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0016-01": {
+    "sku": "P0016-01",
+    "product_id": "P0016",
+    "option": "black",
+    "available": 4,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0016-02": {
+    "sku": "P0016-02",
+    "product_id": "P0016",
+    "option": "olive",
+    "available": 15,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0017-01": {
+    "sku": "P0017-01",
+    "product_id": "P0017",
+    "option": "natural",
+    "available": 9,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0017-02": {
+    "sku": "P0017-02",
+    "product_id": "P0017",
+    "option": "black",
+    "available": 15,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0018-01": {
+    "sku": "P0018-01",
+    "product_id": "P0018",
+    "option": "black",
+    "available": 24,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0018-02": {
+    "sku": "P0018-02",
+    "product_id": "P0018",
+    "option": "clay",
+    "available": 15,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0019-01": {
+    "sku": "P0019-01",
+    "product_id": "P0019",
+    "option": "graphite",
+    "available": 40,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0019-02": {
+    "sku": "P0019-02",
+    "product_id": "P0019",
+    "option": "sand",
+    "available": 18,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0020-01": {
+    "sku": "P0020-01",
+    "product_id": "P0020",
+    "option": "walnut",
+    "available": 12,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0020-02": {
+    "sku": "P0020-02",
+    "product_id": "P0020",
+    "option": "black",
+    "available": 0,
+    "reserved": 0,
+    "restock_eta": "2026-02-09"
+  },
+  "P0021-01": {
+    "sku": "P0021-01",
+    "product_id": "P0021",
+    "option": "tactile",
+    "available": 31,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0021-02": {
+    "sku": "P0021-02",
+    "product_id": "P0021",
+    "option": "linear",
+    "available": 24,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0022-01": {
+    "sku": "P0022-01",
+    "product_id": "P0022",
+    "option": "graphite",
+    "available": 40,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0022-02": {
+    "sku": "P0022-02",
+    "product_id": "P0022",
+    "option": "white",
+    "available": 6,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0023-01": {
+    "sku": "P0023-01",
+    "product_id": "P0023",
+    "option": "white",
+    "available": 24,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0023-02": {
+    "sku": "P0023-02",
+    "product_id": "P0023",
+    "option": "black",
+    "available": 4,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0024-01": {
+    "sku": "P0024-01",
+    "product_id": "P0024",
+    "option": "grey",
+    "available": 31,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0024-02": {
+    "sku": "P0024-02",
+    "product_id": "P0024",
+    "option": "black",
+    "available": 6,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0025-01": {
+    "sku": "P0025-01",
+    "product_id": "P0025",
+    "option": "black",
+    "available": 4,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0026-01": {
+    "sku": "P0026-01",
+    "product_id": "P0026",
+    "option": "8",
+    "available": 9,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0026-02": {
+    "sku": "P0026-02",
+    "product_id": "P0026",
+    "option": "9",
+    "available": 0,
+    "reserved": 2,
+    "restock_eta": "2026-02-16"
+  },
+  "P0026-03": {
+    "sku": "P0026-03",
+    "product_id": "P0026",
+    "option": "10",
+    "available": 12,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0026-04": {
+    "sku": "P0026-04",
+    "product_id": "P0026",
+    "option": "11",
+    "available": 24,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0026-05": {
+    "sku": "P0026-05",
+    "product_id": "P0026",
+    "option": "12",
+    "available": 2,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0027-01": {
+    "sku": "P0027-01",
+    "product_id": "P0027",
+    "option": "8",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-09"
+  },
+  "P0027-02": {
+    "sku": "P0027-02",
+    "product_id": "P0027",
+    "option": "9",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-09"
+  },
+  "P0027-03": {
+    "sku": "P0027-03",
+    "product_id": "P0027",
+    "option": "10",
+    "available": 31,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0027-04": {
+    "sku": "P0027-04",
+    "product_id": "P0027",
+    "option": "11",
+    "available": 2,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0028-01": {
+    "sku": "P0028-01",
+    "product_id": "P0028",
+    "option": "8",
+    "available": 12,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0028-02": {
+    "sku": "P0028-02",
+    "product_id": "P0028",
+    "option": "9",
+    "available": 18,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0028-03": {
+    "sku": "P0028-03",
+    "product_id": "P0028",
+    "option": "10",
+    "available": 24,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0028-04": {
+    "sku": "P0028-04",
+    "product_id": "P0028",
+    "option": "11",
+    "available": 40,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0028-05": {
+    "sku": "P0028-05",
+    "product_id": "P0028",
+    "option": "12",
+    "available": 0,
+    "reserved": 3,
+    "restock_eta": "2026-02-02"
+  },
+  "P0029-01": {
+    "sku": "P0029-01",
+    "product_id": "P0029",
+    "option": "8",
+    "available": 4,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0029-02": {
+    "sku": "P0029-02",
+    "product_id": "P0029",
+    "option": "9",
+    "available": 2,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0029-03": {
+    "sku": "P0029-03",
+    "product_id": "P0029",
+    "option": "10",
+    "available": 31,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0029-04": {
+    "sku": "P0029-04",
+    "product_id": "P0029",
+    "option": "11",
+    "available": 18,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0030-01": {
+    "sku": "P0030-01",
+    "product_id": "P0030",
+    "option": "steel",
+    "available": 24,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0030-02": {
+    "sku": "P0030-02",
+    "product_id": "P0030",
+    "option": "sage",
+    "available": 18,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0030-03": {
+    "sku": "P0030-03",
+    "product_id": "P0030",
+    "option": "clay",
+    "available": 31,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0031-01": {
+    "sku": "P0031-01",
+    "product_id": "P0031",
+    "option": "steel",
+    "available": 6,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0031-02": {
+    "sku": "P0031-02",
+    "product_id": "P0031",
+    "option": "sage",
+    "available": 4,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0032-01": {
+    "sku": "P0032-01",
+    "product_id": "P0032",
+    "option": "moss",
+    "available": 40,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0032-02": {
+    "sku": "P0032-02",
+    "product_id": "P0032",
+    "option": "slate",
+    "available": 6,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0033-01": {
+    "sku": "P0033-01",
+    "product_id": "P0033",
+    "option": "regular",
+    "available": 18,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0033-02": {
+    "sku": "P0033-02",
+    "product_id": "P0033",
+    "option": "long",
+    "available": 24,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0034-01": {
+    "sku": "P0034-01",
+    "product_id": "P0034",
+    "option": "black",
+    "available": 9,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0035-01": {
+    "sku": "P0035-01",
+    "product_id": "P0035",
+    "option": "8in",
+    "available": 31,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0036-01": {
+    "sku": "P0036-01",
+    "product_id": "P0036",
+    "option": "3.5in",
+    "available": 4,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0037-01": {
+    "sku": "P0037-01",
+    "product_id": "P0037",
+    "option": "medium",
+    "available": 9,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0037-02": {
+    "sku": "P0037-02",
+    "product_id": "P0037",
+    "option": "large",
+    "available": 6,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0038-01": {
+    "sku": "P0038-01",
+    "product_id": "P0038",
+    "option": "standard",
+    "available": 40,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0039-01": {
+    "sku": "P0039-01",
+    "product_id": "P0039",
+    "option": "dot-grid",
+    "available": 0,
+    "reserved": 1,
+    "restock_eta": "2026-02-09"
+  },
+  "P0039-02": {
+    "sku": "P0039-02",
+    "product_id": "P0039",
+    "option": "ruled",
+    "available": 31,
+    "reserved": 1,
+    "restock_eta": null
+  },
+  "P0040-01": {
+    "sku": "P0040-01",
+    "product_id": "P0040",
+    "option": "silver",
+    "available": 40,
+    "reserved": 0,
+    "restock_eta": null
+  },
+  "P0040-02": {
+    "sku": "P0040-02",
+    "product_id": "P0040",
+    "option": "black",
+    "available": 12,
+    "reserved": 2,
+    "restock_eta": null
+  },
+  "P0041-01": {
+    "sku": "P0041-01",
+    "product_id": "P0041",
+    "option": "tan",
+    "available": 31,
+    "reserved": 3,
+    "restock_eta": null
+  },
+  "P0041-02": {
+    "sku": "P0041-02",
+    "product_id": "P0041",
+    "option": "black",
+    "available": 15,
+    "reserved": 1,
+    "restock_eta": null
+  }
+}
