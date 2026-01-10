@@ -1,0 +1,54 @@
+{
+  "name": "list_orders",
+  "description": "List a customer's orders, newest first, as summaries. Results are paginated at 20 per page: total_matches reports how many orders matched in full, and next_cursor is non-null whenever more pages remain. Pass next_cursor back as cursor to continue. Do not conclude an order is absent from a single page; check total_matches.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "status": {
+        "type": "string",
+        "description": "Return only orders in this state.",
+        "enum": [
+          "pending",
+          "processing",
+          "shipped",
+          "delivered",
+          "cancelled",
+          "returned"
+        ]
+      },
+      "since": {
+        "type": "string",
+        "description": "Return only orders placed at or after this moment. ISO-8601 instant with a UTC offset, e.g. 2026-01-01T00:00:00Z. A bare date without a time and offset is rejected."
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Orders per page. Values above 20 are capped at 20.",
+        "default": 20,
+        "minimum": 1,
+        "maximum": 20
+      },
+      "cursor": {
+        "type": "string",
+        "description": "Opaque cursor from a previous call's next_cursor. Omit for the first page."
+      }
+    },
+    "required": [
+      "customer_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No account exists with the given customer_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "since is not an ISO-8601 instant, or is missing a UTC offset."
+    }
+  ],
+  "revision": 0
+}

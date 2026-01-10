@@ -1,0 +1,27 @@
+{
+  "name": "get_order",
+  "description": "Return one order in full: status, line items with SKU and unit price, order total, shipping address, payment method and shipment_id when the order has shipped. Use this before cancelling, modifying or refunding an order, since all three depend on the current status.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      }
+    },
+    "required": [
+      "order_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No order exists with the given order_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "order_id is empty."
+    }
+  ],
+  "revision": 0
+}

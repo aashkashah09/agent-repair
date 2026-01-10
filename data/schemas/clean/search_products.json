@@ -1,0 +1,54 @@
+{
+  "name": "search_products",
+  "description": "Search the product catalogue by keyword and return a ranked list of matching products with their price and total units available across all variants. Use this when the customer describes what they want but has not named a specific product. Results are summaries only: call get_product_detail for variants and SKUs, which are what create_order requires.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Free-text keywords matched against product name, description and category."
+      },
+      "category": {
+        "type": "string",
+        "description": "Restrict results to one category. Omit to search all categories.",
+        "enum": [
+          "apparel",
+          "home",
+          "bags",
+          "electronics",
+          "footwear",
+          "outdoor",
+          "kitchen",
+          "stationery"
+        ]
+      },
+      "max_price": {
+        "type": "number",
+        "description": "Exclude products priced above this amount, in USD.",
+        "minimum": 0
+      },
+      "in_stock_only": {
+        "type": "boolean",
+        "description": "When true, exclude products with no units available in any variant.",
+        "default": false
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of products to return.",
+        "default": 10,
+        "minimum": 1,
+        "maximum": 50
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "invalid_argument",
+      "when": "query is empty, or category is not one of the listed values."
+    }
+  ],
+  "revision": 0
+}

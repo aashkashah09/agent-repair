@@ -1,0 +1,29 @@
+{
+  "name": "track_shipment",
+  "description": "Return carrier, tracking number, current status, estimated delivery date and the scan history for a shipment. Accepts either a shipment_id or an order_id; exactly one is required. Orders that have not shipped have no shipment, which is reported as not_found rather than as an empty result.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "shipment_id": {
+        "type": "string",
+        "description": "Shipment identifier, e.g. S00013."
+      },
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042. Resolved to that order's shipment."
+      }
+    },
+    "required": []
+  },
+  "error_returns": [
+    {
+      "code": "invalid_argument",
+      "when": "Neither shipment_id nor order_id was supplied."
+    },
+    {
+      "code": "not_found",
+      "when": "The shipment or order does not exist, or the order has not shipped yet."
+    }
+  ],
+  "revision": 0
+}

@@ -1,0 +1,27 @@
+{
+  "name": "check_inventory",
+  "description": "Return the stock position for a single SKU: units available, units reserved against open orders, and the restock date when availability is zero. Use this to confirm a specific variant can be ordered. It takes a SKU, not a product_id; to go from a product to its SKUs, call get_product_detail first.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "sku": {
+        "type": "string",
+        "description": "Variant identifier in the form <product_id>-<nn>, e.g. P0007-02."
+      }
+    },
+    "required": [
+      "sku"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No inventory record exists for the given sku."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "sku is empty."
+    }
+  ],
+  "revision": 0
+}
