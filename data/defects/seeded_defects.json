@@ -1,0 +1,547 @@
+{
+  "server": "commerce-support",
+  "tool_count": 14,
+  "defects": [
+    {
+      "defect_id": "D01",
+      "pattern": "undocumented-enum",
+      "severity": "severe",
+      "tools": [
+        "cancel_order"
+      ],
+      "parameter": "reason",
+      "summary": "cancel_order.reason accepts four literals and rejects anything else, but the schema types it as a free-form string and the description invites prose.",
+      "mutations": [
+        {
+          "op": "drop_enum",
+          "tool": "cancel_order",
+          "path": "reason"
+        },
+        {
+          "op": "set_param_description",
+          "tool": "cancel_order",
+          "path": "reason",
+          "text": "Reason the order is being cancelled."
+        },
+        {
+          "op": "set_error_return",
+          "tool": "cancel_order",
+          "code": "invalid_argument",
+          "when": "The request was rejected."
+        }
+      ]
+    },
+    {
+      "defect_id": "D02",
+      "pattern": "undocumented-enum",
+      "severity": "moderate",
+      "tools": [
+        "create_support_ticket"
+      ],
+      "parameter": "category",
+      "summary": "The category enum is stale: it still advertises a queue that was retired and omits return_request, which the server does accept.",
+      "mutations": [
+        {
+          "op": "set_enum",
+          "tool": "create_support_ticket",
+          "path": "category",
+          "values": [
+            "shipping",
+            "billing",
+            "product_defect",
+            "refund",
+            "other"
+          ]
+        }
+      ]
+    },
+    {
+      "defect_id": "D03",
+      "pattern": "undocumented-enum",
+      "severity": "mild",
+      "tools": [
+        "update_support_ticket"
+      ],
+      "parameter": "priority",
+      "summary": "The priority enum omits urgent, which the server accepts and which agents reach for on escalations.",
+      "mutations": [
+        {
+          "op": "set_enum",
+          "tool": "update_support_ticket",
+          "path": "priority",
+          "values": [
+            "low",
+            "normal",
+            "high"
+          ]
+        }
+      ]
+    },
+    {
+      "defect_id": "D04",
+      "pattern": "silent-empty-return",
+      "severity": "severe",
+      "tools": [
+        "search_products"
+      ],
+      "parameter": "category",
+      "summary": "An unknown category returns an empty result set rather than an error, so a typo is indistinguishable from a catalogue with no matching products.",
+      "mutations": [
+        {
+          "op": "runtime",
+          "behaviour": "search_swallow_unknown_category"
+        },
+        {
+          "op": "drop_error_return",
+          "tool": "search_products",
+          "code": "invalid_argument"
+        },
+        {
+          "op": "set_param_description",
+          "tool": "search_products",
+          "path": "category",
+          "text": "Restrict results to one category."
+        }
+      ]
+    },
+    {
+      "defect_id": "D05",
+      "pattern": "silent-empty-return",
+      "severity": "moderate",
+      "tools": [
+        "track_shipment"
+      ],
+      "parameter": null,
+      "summary": "An order that has not shipped returns a record with a null status and no events instead of reporting that no shipment exists.",
+      "mutations": [
+        {
+          "op": "runtime",
+          "behaviour": "track_empty_when_unshipped"
+        },
+        {
+          "op": "set_error_return",
+          "tool": "track_shipment",
+          "code": "not_found",
+          "when": "The shipment or order does not exist."
+        },
+        {
+          "op": "set_tool_description",
+          "tool": "track_shipment",
+          "text": "Return carrier, tracking number, current status, estimated delivery date and the scan history for a shipment. Accepts either a shipment_id or an order_id; exactly one is required."
+        }
+      ]
+    },
+    {
+      "defect_id": "D06",
+      "pattern": "silent-empty-return",
+      "severity": "mild",
+      "tools": [
+        "list_orders"
+      ],
+      "parameter": "customer_id",
+      "summary": "An unknown customer_id returns an empty order list rather than not_found.",
+      "mutations": [
+        {
+          "op": "runtime",
+          "behaviour": "list_orders_empty_for_unknown_customer"
+        },
+        {
+          "op": "drop_error_return",
+          "tool": "list_orders",
+          "code": "not_found"
+        }
+      ]
+    },
+    {
+      "defect_id": "D07",
+      "pattern": "ambiguous-datetime",
+      "severity": "severe",
+      "tools": [
+        "list_orders"
+      ],
+      "parameter": "since",
+      "summary": "since is documented as a date with no format given, but the server requires a full ISO-8601 instant with an offset and rejects a bare date.",
+      "mutations": [
+        {
+          "op": "set_param_description",
+          "tool": "list_orders",
+          "path": "since",
+          "text": "Only return orders placed after this date."
+        },
+        {
+          "op": "drop_error_return",
+          "tool": "list_orders",
+          "code": "invalid_argument"
+        }
+      ]
+    },
+    {
+      "defect_id": "D08",
+      "pattern": "ambiguous-datetime",
+      "severity": "moderate",
+      "tools": [
+        "check_inventory"
+      ],
+      "parameter": "restock_eta",
+      "summary": "restock_eta is returned as a bare calendar date while every other timestamp in the domain is an ISO-8601 instant, and the description does not say which it is.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "check_inventory",
+          "text": "Return the stock position for a single SKU: units available, units reserved against open orders, and the restock timestamp when availability is zero. It takes a SKU, not a product_id."
+        }
+      ]
+    },
+    {
+      "defect_id": "D09",
+      "pattern": "ambiguous-datetime",
+      "severity": "mild",
+      "tools": [
+        "track_shipment"
+      ],
+      "parameter": "estimated_delivery",
+      "summary": "estimated_delivery is described as a timestamp but returned as a bare calendar date, so comparisons against order timestamps are off by an unstated amount.",
+      "mutations": [
+        {
+          "op": "set_error_return",
+          "tool": "track_shipment",
+          "code": "not_found",
+          "when": "The shipment or order does not exist. Delivery estimates are timestamps."
+        }
+      ]
+    },
+    {
+      "defect_id": "D10",
+      "pattern": "overloaded-tool-mode",
+      "severity": "severe",
+      "tools": [
+        "modify_order_items"
+      ],
+      "parameter": "mode",
+      "summary": "One tool covers three different operations behind a mode flag, each requiring a different set of fields on items, and the schema documents none of that.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "modify_order_items",
+          "text": "Change the line items on an order, adjusting stock reservations to match."
+        },
+        {
+          "op": "set_param_description",
+          "tool": "modify_order_items",
+          "path": "mode",
+          "text": "Operation to perform."
+        },
+        {
+          "op": "set_param_description",
+          "tool": "modify_order_items",
+          "path": "items",
+          "text": "Entries to apply."
+        },
+        {
+          "op": "set_param_description",
+          "tool": "modify_order_items",
+          "path": "items[].quantity",
+          "text": "Units."
+        },
+        {
+          "op": "set_param_description",
+          "tool": "modify_order_items",
+          "path": "items[].replacement_sku",
+          "text": "Replacement variant identifier."
+        }
+      ]
+    },
+    {
+      "defect_id": "D11",
+      "pattern": "overloaded-tool-mode",
+      "severity": "moderate",
+      "tools": [
+        "update_support_ticket"
+      ],
+      "parameter": null,
+      "summary": "Status change, priority change and note append are three independent operations behind one call, and the schema does not say that at least one must be supplied.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "update_support_ticket",
+          "text": "Update an existing support ticket."
+        }
+      ]
+    },
+    {
+      "defect_id": "D12",
+      "pattern": "overloaded-tool-mode",
+      "severity": "mild",
+      "tools": [
+        "process_refund"
+      ],
+      "parameter": "amount",
+      "summary": "Omitting amount switches the call from a partial refund to a full one; the schema presents amount as an ordinary optional field.",
+      "mutations": [
+        {
+          "op": "set_param_description",
+          "tool": "process_refund",
+          "path": "amount",
+          "text": "Refund amount in USD."
+        }
+      ]
+    },
+    {
+      "defect_id": "D13",
+      "pattern": "unstated-precondition",
+      "severity": "severe",
+      "tools": [
+        "process_refund"
+      ],
+      "parameter": null,
+      "summary": "A refund requires the order to be cancelled or returned first. Nothing in the schema says so, and the state rejection is not listed among the error returns.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "process_refund",
+          "text": "Issue a refund against an order. Omitting amount refunds everything still outstanding; partial refunds may be repeated up to the order total."
+        },
+        {
+          "op": "drop_error_return",
+          "tool": "process_refund",
+          "code": "invalid_state"
+        }
+      ]
+    },
+    {
+      "defect_id": "D14",
+      "pattern": "unstated-precondition",
+      "severity": "moderate",
+      "tools": [
+        "modify_order_items"
+      ],
+      "parameter": null,
+      "summary": "Only pending orders can be modified. The schema keeps a state error but does not say which states are permitted.",
+      "mutations": [
+        {
+          "op": "set_error_return",
+          "tool": "modify_order_items",
+          "code": "invalid_state",
+          "when": "The order is not in a modifiable state."
+        }
+      ]
+    },
+    {
+      "defect_id": "D15",
+      "pattern": "unstated-precondition",
+      "severity": "mild",
+      "tools": [
+        "create_order"
+      ],
+      "parameter": "address_id",
+      "summary": "address_id is optional only when the account has exactly one saved address; on a multi-address account omitting it is an error the schema does not mention.",
+      "mutations": [
+        {
+          "op": "set_param_description",
+          "tool": "create_order",
+          "path": "address_id",
+          "text": "A saved address_id to ship to."
+        }
+      ]
+    },
+    {
+      "defect_id": "D16",
+      "pattern": "near-duplicate-tool-naming",
+      "severity": "severe",
+      "tools": [
+        "get_product_detail",
+        "check_inventory"
+      ],
+      "parameter": null,
+      "summary": "Two tools describe themselves as returning product information including availability. Neither description is wrong on its own; together they give no basis for choosing between them.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "get_product_detail",
+          "text": "Return product information including price, options and availability."
+        },
+        {
+          "op": "set_tool_description",
+          "tool": "check_inventory",
+          "text": "Return product availability information for an item."
+        }
+      ]
+    },
+    {
+      "defect_id": "D17",
+      "pattern": "near-duplicate-tool-naming",
+      "severity": "moderate",
+      "tools": [
+        "search_products",
+        "get_product_detail"
+      ],
+      "parameter": null,
+      "summary": "search_products advertises itself as returning product details, so the follow-up call that resolves SKUs looks redundant.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "search_products",
+          "text": "Search the product catalogue by keyword and return product details for the matches, including price and availability."
+        }
+      ]
+    },
+    {
+      "defect_id": "D18",
+      "pattern": "near-duplicate-tool-naming",
+      "severity": "mild",
+      "tools": [
+        "create_support_ticket",
+        "update_support_ticket"
+      ],
+      "parameter": null,
+      "summary": "create_support_ticket describes itself as creating or updating a ticket, overlapping the tool that actually performs updates.",
+      "mutations": [
+        {
+          "op": "set_tool_description",
+          "tool": "create_support_ticket",
+          "text": "Create or update a support ticket on a customer's account for an issue that cannot be resolved with the other tools. Attach order_id when the issue concerns a specific order."
+        }
+      ]
+    },
+    {
+      "defect_id": "D19",
+      "pattern": "untyped-passthrough",
+      "severity": "severe",
+      "tools": [
+        "update_customer_profile"
+      ],
+      "parameter": "address",
+      "summary": "address is typed as a string although the server requires an object with line1, city, state and postal_code.",
+      "mutations": [
+        {
+          "op": "replace_param_schema",
+          "tool": "update_customer_profile",
+          "path": "address",
+          "schema": {
+            "type": "string",
+            "description": "Customer address."
+          }
+        }
+      ]
+    },
+    {
+      "defect_id": "D20",
+      "pattern": "untyped-passthrough",
+      "severity": "moderate",
+      "tools": [
+        "create_order"
+      ],
+      "parameter": "items",
+      "summary": "The items array declares an object element type with no properties, leaving the sku and quantity fields undiscoverable from the schema.",
+      "mutations": [
+        {
+          "op": "replace_param_schema",
+          "tool": "create_order",
+          "path": "items",
+          "schema": {
+            "type": "array",
+            "description": "Line items to order.",
+            "items": {
+              "type": "object"
+            },
+            "minItems": 1
+          }
+        }
+      ]
+    },
+    {
+      "defect_id": "D21",
+      "pattern": "untyped-passthrough",
+      "severity": "mild",
+      "tools": [
+        "search_products"
+      ],
+      "parameter": "max_price",
+      "summary": "max_price is typed as a string although it is compared numerically against catalogue prices.",
+      "mutations": [
+        {
+          "op": "set_type",
+          "tool": "search_products",
+          "path": "max_price",
+          "type": "string"
+        },
+        {
+          "op": "set_param_description",
+          "tool": "search_products",
+          "path": "max_price",
+          "text": "Maximum price."
+        }
+      ]
+    },
+    {
+      "defect_id": "D22",
+      "pattern": "silent-pagination-truncation",
+      "severity": "severe",
+      "tools": [
+        "list_orders"
+      ],
+      "parameter": "cursor",
+      "summary": "The response is capped at one page with no cursor and no match count, so an order beyond the first twenty is indistinguishable from an order that does not exist.",
+      "mutations": [
+        {
+          "op": "runtime",
+          "behaviour": "list_orders_drop_pagination"
+        },
+        {
+          "op": "drop_param",
+          "tool": "list_orders",
+          "path": "cursor"
+        },
+        {
+          "op": "set_tool_description",
+          "tool": "list_orders",
+          "text": "List a customer's orders, newest first, as summaries."
+        },
+        {
+          "op": "set_param_description",
+          "tool": "list_orders",
+          "path": "limit",
+          "text": "Maximum number of orders to return."
+        }
+      ]
+    },
+    {
+      "defect_id": "D23",
+      "pattern": "silent-pagination-truncation",
+      "severity": "moderate",
+      "tools": [
+        "search_products"
+      ],
+      "parameter": "limit",
+      "summary": "Results are truncated to ten regardless of the requested limit, and the match count that would reveal the truncation is not returned.",
+      "mutations": [
+        {
+          "op": "runtime",
+          "behaviour": "search_truncate_to_ten"
+        },
+        {
+          "op": "set_param_description",
+          "tool": "search_products",
+          "path": "limit",
+          "text": "Maximum number of products to return."
+        }
+      ]
+    },
+    {
+      "defect_id": "D24",
+      "pattern": "silent-pagination-truncation",
+      "severity": "mild",
+      "tools": [
+        "track_shipment"
+      ],
+      "parameter": "events",
+      "summary": "Only the two most recent scan events are returned, so an agent reconstructing a delivery timeline silently loses the earlier ones.",
+      "mutations": [
+        {
+          "op": "runtime",
+          "behaviour": "track_truncate_events"
+        }
+      ]
+    }
+  ]
+}
