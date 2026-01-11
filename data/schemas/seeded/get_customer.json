@@ -1,0 +1,29 @@
+{
+  "name": "get_customer",
+  "description": "Look up a customer account by id or by email address and return their contact details, saved addresses and payment methods. The address_id and payment_method_id values returned here are the ones create_order accepts. Exactly one of customer_id or email must be supplied.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "email": {
+        "type": "string",
+        "description": "Email address on the account. Matched case-insensitively."
+      }
+    },
+    "required": []
+  },
+  "error_returns": [
+    {
+      "code": "invalid_argument",
+      "when": "Neither customer_id nor email was supplied."
+    },
+    {
+      "code": "not_found",
+      "when": "No account matches the given customer_id or email."
+    }
+  ],
+  "revision": 0
+}

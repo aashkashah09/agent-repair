@@ -1,0 +1,36 @@
+{
+  "name": "cancel_order",
+  "description": "Cancel an order that has not yet shipped and release its reserved stock. Only pending and processing orders can be cancelled; once an order is shipped or delivered it must go through a return instead. Cancelling does not move money: call process_refund afterwards to return the customer's payment.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      },
+      "reason": {
+        "type": "string",
+        "description": "Reason the order is being cancelled."
+      }
+    },
+    "required": [
+      "order_id",
+      "reason"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No order exists with the given order_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "The request was rejected."
+    },
+    {
+      "code": "invalid_state",
+      "when": "The order is already cancelled, or has shipped or been delivered."
+    }
+  ],
+  "revision": 0
+}

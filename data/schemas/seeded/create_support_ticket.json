@@ -1,0 +1,53 @@
+{
+  "name": "create_support_ticket",
+  "description": "Create or update a support ticket on a customer's account for an issue that cannot be resolved with the other tools. Attach order_id when the issue concerns a specific order.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "subject": {
+        "type": "string",
+        "description": "One-line summary of the issue."
+      },
+      "body": {
+        "type": "string",
+        "description": "Full description, in the customer's own terms where possible."
+      },
+      "category": {
+        "type": "string",
+        "description": "Which queue the ticket is routed to.",
+        "enum": [
+          "shipping",
+          "billing",
+          "product_defect",
+          "refund",
+          "other"
+        ]
+      },
+      "order_id": {
+        "type": "string",
+        "description": "Order the issue concerns, if any."
+      }
+    },
+    "required": [
+      "customer_id",
+      "subject",
+      "body",
+      "category"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "The customer, or the named order, does not exist."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "subject or body is empty, category is not one of the listed values, or the order belongs to a different customer."
+    }
+  ],
+  "revision": 0
+}

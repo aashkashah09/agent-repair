@@ -1,0 +1,41 @@
+{
+  "name": "list_orders",
+  "description": "List a customer's orders, newest first, as summaries.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "status": {
+        "type": "string",
+        "description": "Return only orders in this state.",
+        "enum": [
+          "pending",
+          "processing",
+          "shipped",
+          "delivered",
+          "cancelled",
+          "returned"
+        ]
+      },
+      "since": {
+        "type": "string",
+        "description": "Only return orders placed after this date."
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of orders to return.",
+        "default": 20,
+        "minimum": 1,
+        "maximum": 20
+      }
+    },
+    "required": [
+      "customer_id"
+    ]
+  },
+  "error_returns": [],
+  "revision": 0
+}

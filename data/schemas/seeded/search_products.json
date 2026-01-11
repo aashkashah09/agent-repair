@@ -1,0 +1,48 @@
+{
+  "name": "search_products",
+  "description": "Search the product catalogue by keyword and return product details for the matches, including price and availability.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Free-text keywords matched against product name, description and category."
+      },
+      "category": {
+        "type": "string",
+        "description": "Restrict results to one category.",
+        "enum": [
+          "apparel",
+          "home",
+          "bags",
+          "electronics",
+          "footwear",
+          "outdoor",
+          "kitchen",
+          "stationery"
+        ]
+      },
+      "max_price": {
+        "type": "string",
+        "description": "Maximum price."
+      },
+      "in_stock_only": {
+        "type": "boolean",
+        "description": "When true, exclude products with no units available in any variant.",
+        "default": false
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of products to return.",
+        "default": 10,
+        "minimum": 1,
+        "maximum": 50
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "error_returns": [],
+  "revision": 0
+}

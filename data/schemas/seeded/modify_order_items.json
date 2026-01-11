@@ -1,0 +1,72 @@
+{
+  "name": "modify_order_items",
+  "description": "Change the line items on an order, adjusting stock reservations to match.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      },
+      "mode": {
+        "type": "string",
+        "description": "Operation to perform.",
+        "enum": [
+          "add",
+          "remove",
+          "replace"
+        ]
+      },
+      "items": {
+        "type": "array",
+        "description": "Entries to apply.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string",
+              "description": "Variant identifier. In replace mode, the line being changed."
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Units.",
+              "minimum": 1
+            },
+            "replacement_sku": {
+              "type": "string",
+              "description": "Replacement variant identifier."
+            }
+          },
+          "required": [
+            "sku"
+          ]
+        },
+        "minItems": 1
+      }
+    },
+    "required": [
+      "order_id",
+      "mode",
+      "items"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "The order does not exist, or a named SKU is not on the order."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "mode is not add, remove or replace; items is empty; a replace entry omits replacement_sku; the quantity to remove exceeds the line; or the change would empty the order."
+    },
+    {
+      "code": "invalid_state",
+      "when": "The order is not in a modifiable state."
+    },
+    {
+      "code": "insufficient_stock",
+      "when": "An add or replace would reserve more units than are available."
+    }
+  ],
+  "revision": 0
+}

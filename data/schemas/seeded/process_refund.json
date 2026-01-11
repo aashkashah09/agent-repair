@@ -1,0 +1,41 @@
+{
+  "name": "process_refund",
+  "description": "Issue a refund against an order. Omitting amount refunds everything still outstanding; partial refunds may be repeated up to the order total.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      },
+      "method": {
+        "type": "string",
+        "description": "Where the money goes.",
+        "enum": [
+          "original_payment",
+          "store_credit"
+        ]
+      },
+      "amount": {
+        "type": "number",
+        "description": "Refund amount in USD.",
+        "exclusiveMinimum": 0
+      }
+    },
+    "required": [
+      "order_id",
+      "method"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No order exists with the given order_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "method is not one of the listed values, amount is not positive, or amount exceeds the balance still refundable."
+    }
+  ],
+  "revision": 0
+}

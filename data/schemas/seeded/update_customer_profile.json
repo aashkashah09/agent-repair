@@ -1,0 +1,39 @@
+{
+  "name": "update_customer_profile",
+  "description": "Update contact details on a customer account. At least one of email, phone or address must be supplied; fields that are omitted are left unchanged. Supplying an address whose address_id already exists replaces that address in place; omitting address_id adds a new one. This tool does not change the address on an order that has already been placed.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "email": {
+        "type": "string",
+        "description": "Replacement email address."
+      },
+      "phone": {
+        "type": "string",
+        "description": "Replacement phone number."
+      },
+      "address": {
+        "type": "string",
+        "description": "Customer address."
+      }
+    },
+    "required": [
+      "customer_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No account exists with the given customer_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "No updatable field was supplied, email lacks an '@', or address is missing a required field."
+    }
+  ],
+  "revision": 0
+}
