@@ -47,11 +47,37 @@ def test_every_mutation_names_a_real_tool_or_behaviour(defects):
                 assert mutation["tool"] in TOOL_ORDER
 
 
+def test_seeding_is_deterministic(clean_schemas, defects):
+    first = apply_defects(clean_schemas, defects)
+    second = apply_defects(clean_schemas, defects)
+    for name in TOOL_ORDER:
+        assert first[name].to_dict() == second[name].to_dict()
+
+
+def test_seeding_does_not_touch_the_clean_set(clean_schemas, defects):
+    before = clean_schemas["cancel_order"].to_dict()
+    apply_defects(clean_schemas, defects)
+    assert clean_schemas["cancel_order"].to_dict() == before
+
+
 def test_committed_seeded_set_matches_the_catalogue(clean_schemas, defects):
     expected = apply_defects(clean_schemas, defects)
     committed = SchemaSet.load(SEEDED_DIR)
     for name in TOOL_ORDER:
         assert committed[name].to_dict() == expected[name].to_dict(), name
+
+
+def test_seeding_actually_degrades_the_schemas(clean_schemas, defects):
+    seeded = apply_defects(clean_schemas, defects)
+    # D01 opens a closed value set.
+    assert "enum" in clean_schemas["cancel_order"].parameters["reason"]
+    assert "enum" not in seeded["cancel_order"].parameters["reason"]
+    # D19 flattens a structured parameter.
+    assert clean_schemas["update_customer_profile"].parameters["address"]["type"] == "object"
+    assert seeded["update_customer_profile"].parameters["address"]["type"] == "string"
+    # D22 removes the pagination cursor.
+    assert "cursor" in clean_schemas["list_orders"].parameters
+    assert "cursor" not in seeded["list_orders"].parameters
 
 
 def test_seeding_leaves_a_valid_schema_set(clean_schemas, defects):

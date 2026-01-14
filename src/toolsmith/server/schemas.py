@@ -9,6 +9,7 @@ The optimizer rewrites these documents; the tool implementations never change.
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -52,11 +53,14 @@ class ToolSchema:
         missing = [key for key in REQUIRED_KEYS if key not in payload]
         if missing:
             raise SchemaError(f"tool schema missing key(s): {', '.join(missing)}")
+        # Deep-copied so that building a schema from another one's dict gives an
+        # independent object: the optimizer edits candidates in place while the
+        # gate still needs the unmodified original to diff against.
         return cls(
             name=payload["name"],
             description=payload["description"],
-            input_schema=payload["input_schema"],
-            error_returns=payload["error_returns"],
+            input_schema=deepcopy(payload["input_schema"]),
+            error_returns=deepcopy(payload["error_returns"]),
             revision=payload.get("revision", 0),
         )
 

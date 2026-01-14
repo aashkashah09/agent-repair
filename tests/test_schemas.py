@@ -39,6 +39,24 @@ def test_round_trip_through_disk_is_lossless(clean_schemas, tmp_path):
         assert reloaded[name].to_dict() == clean_schemas[name].to_dict()
 
 
+def test_copy_is_independent(clean_schemas):
+    duplicate = clean_schemas.copy()
+    duplicate["cancel_order"].description = "changed"
+    duplicate["cancel_order"].input_schema["properties"]["reason"]["description"] = "changed"
+    assert clean_schemas["cancel_order"].description != "changed"
+    assert (
+        clean_schemas["cancel_order"].input_schema["properties"]["reason"]["description"]
+        != "changed"
+    )
+
+
+def test_from_dict_does_not_alias_the_source(clean_schemas):
+    source = clean_schemas["create_order"]
+    clone = ToolSchema.from_dict(source.to_dict())
+    clone.input_schema["properties"]["items"]["description"] = "changed"
+    assert source.input_schema["properties"]["items"]["description"] != "changed"
+
+
 def test_mcp_declaration_carries_the_error_returns(clean_schemas):
     declaration = clean_schemas["process_refund"].to_mcp()
     assert "invalid_state" in declaration["description"]
