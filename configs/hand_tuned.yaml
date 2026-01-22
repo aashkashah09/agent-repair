@@ -1,0 +1,26 @@
+name: hand_tuned
+schema_set: data/schemas/clean
+seed: 20260105
+tasks_path: data/tasks/tasks.jsonl
+domain_path: data/domain
+
+models:
+  agent: claude-sonnet-5
+  user_sim: claude-sonnet-5
+  judge: claude-opus-5
+  optimizer: claude-opus-5
+  max_tokens: 4096
+  effort: medium
+
+eval:
+  k: 8
+  max_turns: 24
+  max_tool_calls: 32
+  user_mode: adversarial
+  bootstrap_resamples: 10000
+  ci_level: 0.95
+
+gate:
+  min_target_delta: 0.05
+  max_collateral_regression: -0.03
+  block_permission_expansion: true
