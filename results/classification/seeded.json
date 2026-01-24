@@ -1,0 +1,29 @@
+{
+  "total": 416,
+  "counts": {
+    "wrong_tool_selection": 158,
+    "malformed_arguments": 100,
+    "loop": 58,
+    "context_loss": 50,
+    "premature_termination": 33,
+    "agent_attributable": 17
+  },
+  "share": {
+    "wrong_tool_selection": 0.3798,
+    "malformed_arguments": 0.2404,
+    "loop": 0.1394,
+    "context_loss": 0.1202,
+    "premature_termination": 0.0793,
+    "agent_attributable": 0.0409
+  },
+  "labels": {
+    "wrong_tool_selection": "Wrong tool selection",
+    "malformed_arguments": "Malformed arguments",
+    "loop": "Retry loop",
+    "context_loss": "Context loss",
+    "premature_termination": "Premature termination",
+    "agent_attributable": "Agent-attributable"
+  },
+  "run": "seeded",
+  "failed_runs": 416
+}
