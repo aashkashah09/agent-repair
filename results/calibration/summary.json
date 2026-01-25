@@ -1,0 +1,95 @@
+{
+  "n": 200,
+  "agreement": 0.88,
+  "cohens_kappa": 0.8411,
+  "per_class": {
+    "wrong_tool_selection": {
+      "support": 76,
+      "precision": 0.8947,
+      "recall": 0.8947,
+      "f1": 0.8947
+    },
+    "malformed_arguments": {
+      "support": 48,
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875
+    },
+    "loop": {
+      "support": 29,
+      "precision": 0.9643,
+      "recall": 0.931,
+      "f1": 0.9474
+    },
+    "context_loss": {
+      "support": 25,
+      "precision": 0.875,
+      "recall": 0.84,
+      "f1": 0.8571
+    },
+    "premature_termination": {
+      "support": 15,
+      "precision": 0.8125,
+      "recall": 0.8667,
+      "f1": 0.8387
+    },
+    "agent_attributable": {
+      "support": 7,
+      "precision": 0.625,
+      "recall": 0.7143,
+      "f1": 0.6667
+    }
+  },
+  "confusion": {
+    "wrong_tool_selection": {
+      "wrong_tool_selection": 68,
+      "malformed_arguments": 4,
+      "loop": 0,
+      "context_loss": 2,
+      "premature_termination": 0,
+      "agent_attributable": 2
+    },
+    "malformed_arguments": {
+      "wrong_tool_selection": 5,
+      "malformed_arguments": 42,
+      "loop": 1,
+      "context_loss": 0,
+      "premature_termination": 0,
+      "agent_attributable": 0
+    },
+    "loop": {
+      "wrong_tool_selection": 0,
+      "malformed_arguments": 2,
+      "loop": 27,
+      "context_loss": 0,
+      "premature_termination": 0,
+      "agent_attributable": 0
+    },
+    "context_loss": {
+      "wrong_tool_selection": 2,
+      "malformed_arguments": 0,
+      "loop": 0,
+      "context_loss": 21,
+      "premature_termination": 2,
+      "agent_attributable": 0
+    },
+    "premature_termination": {
+      "wrong_tool_selection": 0,
+      "malformed_arguments": 0,
+      "loop": 0,
+      "context_loss": 1,
+      "premature_termination": 13,
+      "agent_attributable": 1
+    },
+    "agent_attributable": {
+      "wrong_tool_selection": 1,
+      "malformed_arguments": 0,
+      "loop": 0,
+      "context_loss": 0,
+      "premature_termination": 1,
+      "agent_attributable": 5
+    }
+  },
+  "labels_path": "data/calibration/judge_calibration.jsonl",
+  "judge_model": "claude-opus-5"
+}
