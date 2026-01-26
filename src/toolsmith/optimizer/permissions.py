@@ -21,20 +21,20 @@ from typing import Any
 from ..server.schemas import ToolSchema
 from ..server.tools import ACCEPTED_VALUES
 
-# Phrases that carry a restriction. Losing one between revisions means the
-# schema no longer tells the caller it cannot do something.
+# Constructions that state a limit on what a caller may ask for. Deliberately
+# narrow: a description says "only" for all sorts of reasons that have nothing
+# to do with authority, and treating every one of them as a restriction makes
+# ordinary rewording look like a permission change.
 RESTRICTION_PATTERNS = (
     r"\bmust (?:be|already|first|not)\b",
     r"\bcannot\b",
-    r"\bcan(?:not| no longer) be\b",
-    r"\bonly\b",
+    r"\bcan only\b",
+    r"\bcan no longer be\b",
     r"\bnot (?:supported|permitted|allowed)\b",
-    r"\brejected\b",
+    r"\b(?:is|are) rejected\b",
     r"\bis required when\b",
     r"\bare immutable\b",
-    r"\bnever\b",
 )
-
 
 BOUND_KEYS = ("minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum")
 SIZE_KEYS = ("minItems", "maxItems", "minLength", "maxLength")
@@ -50,9 +50,31 @@ class Expansion:
         return {"kind": self.kind, "where": self.where, "detail": self.detail}
 
 
-def _restrictions(text: str) -> set[str]:
-    """Which restriction markers the description states at all."""
-    lowered = text.lower()
+def _declaration_text(schema: ToolSchema) -> str:
+    """Everything the declaration says, as one body of text.
+
+    Restrictions are looked for across the whole declaration rather than the
+    tool description alone: moving a stated limit from the description into the
+    parameter it constrains, or into the error returns, is where it belongs and
+    is not a loss of that limit.
+    """
+    parts = [schema.description]
+    parts.extend(
+        node.get("description", "") for node in _walk(schema.input_schema).values()
+    )
+    parts.extend(entry.get("when", "") for entry in schema.error_returns)
+    return "\n".join(parts)
+
+
+def _restrictions(schema: ToolSchema) -> set[str]:
+    """Which restriction markers the declaration states at all.
+
+    Matched on the marker rather than its surrounding wording: a revision is
+    expected to reword, and rewording a restriction is not dropping it. What
+    counts is a restriction the old declaration stated and the new one no
+    longer states anywhere.
+    """
+    lowered = _declaration_text(schema).lower()
     return {pattern for pattern in RESTRICTION_PATTERNS if re.search(pattern, lowered)}
 
 
@@ -157,13 +179,13 @@ def diff(
             Expansion("required_dropped", f"{after.name}.{parameter}", "no longer required")
         )
 
-    lost = _restrictions(before.description) - _restrictions(after.description)
+    lost = _restrictions(before) - _restrictions(after)
     for pattern in sorted(lost):
         expansions.append(
             Expansion(
                 "restriction_removed",
                 after.name,
-                f"description no longer states a restriction matching /{pattern}/",
+                f"declaration no longer states a restriction matching /{pattern}/",
             )
         )
 
