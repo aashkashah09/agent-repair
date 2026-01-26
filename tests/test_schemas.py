@@ -4,7 +4,7 @@ import pytest
 
 from toolsmith.config import REPO_ROOT
 from toolsmith.server.schemas import TOOL_ORDER, SchemaError, SchemaSet, ToolSchema
-from toolsmith.server.tools import REGISTRY
+from toolsmith.server.tools import ACCEPTED_VALUES, REGISTRY
 
 SCHEMA_SETS = sorted(
     path for path in (REPO_ROOT / "data" / "schemas").iterdir() if path.is_dir()
@@ -30,6 +30,14 @@ def test_declared_parameters_exist_on_the_implementation(directory):
         declared = set(schemas[name].parameters)
         accepted = implementation_parameters(name)
         assert declared <= accepted, f"{directory.name}/{name}: {declared - accepted}"
+
+
+def test_the_reference_set_declares_enums_exactly(clean_schemas):
+    for (tool, parameter), allowed in ACCEPTED_VALUES.items():
+        node = clean_schemas[tool].parameters.get(parameter)
+        if node is None or "enum" not in node:
+            continue
+        assert set(node["enum"]) == set(allowed), f"{tool}.{parameter}"
 
 
 def test_round_trip_through_disk_is_lossless(clean_schemas, tmp_path):

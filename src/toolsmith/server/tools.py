@@ -18,7 +18,9 @@ from .db import REFUNDABLE_STATES, Database, DomainError
 
 REGISTRY: dict[str, Callable[..., dict[str, Any]]] = {}
 
-# Values accepted by cancel_order.reason and by the refund audit trail.
+# Closed value sets the implementations enforce. Kept here rather than inline
+# so the published schemas and the permission analysis have one thing to agree
+# with.
 CANCELLATION_REASONS = (
     "no_longer_needed",
     "ordered_by_mistake",
@@ -27,8 +29,21 @@ CANCELLATION_REASONS = (
 )
 REFUND_METHODS = ("original_payment", "store_credit")
 TICKET_CATEGORIES = ("shipping", "billing", "product_defect", "return_request", "other")
+TICKET_STATUSES = ("open", "pending_customer", "resolved", "closed")
+TICKET_PRIORITIES = ("low", "normal", "high", "urgent")
+MODIFY_MODES = ("add", "remove", "replace")
+ORDER_STATUSES = ("pending", "processing", "shipped", "delivered", "cancelled", "returned")
 PAGE_SIZE = 20
 
+ACCEPTED_VALUES: dict[tuple[str, str], tuple[str, ...]] = {
+    ("cancel_order", "reason"): CANCELLATION_REASONS,
+    ("process_refund", "method"): REFUND_METHODS,
+    ("create_support_ticket", "category"): TICKET_CATEGORIES,
+    ("update_support_ticket", "status"): TICKET_STATUSES,
+    ("update_support_ticket", "priority"): TICKET_PRIORITIES,
+    ("modify_order_items", "mode"): MODIFY_MODES,
+    ("list_orders", "status"): ORDER_STATUSES,
+}
 
 
 def tool(name: str) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
@@ -386,7 +401,7 @@ def modify_order_items(
     items: list[dict[str, Any]],
 ) -> dict[str, Any]:
     order = db.order(_require(order_id, "order_id"))
-    _enum(_require(mode, "mode"), ("add", "remove", "replace"), "mode")
+    _enum(_require(mode, "mode"), MODIFY_MODES, "mode")
     if order["status"] != "pending":
         raise DomainError(
             "invalid_state",
@@ -581,10 +596,10 @@ def update_support_ticket(
     if ticket["status"] == "closed":
         raise DomainError("invalid_state", f"Ticket {ticket_id} is closed and cannot be updated.")
     if status is not None:
-        _enum(status, ("open", "pending_customer", "resolved", "closed"), "status")
+        _enum(status, TICKET_STATUSES, "status")
         ticket["status"] = status
     if priority is not None:
-        _enum(priority, ("low", "normal", "high", "urgent"), "priority")
+        _enum(priority, TICKET_PRIORITIES, "priority")
         ticket["priority"] = priority
     if note is not None:
         ticket["notes"].append({"at": db.now(), "text": note})
