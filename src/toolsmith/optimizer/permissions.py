@@ -19,6 +19,7 @@ from dataclasses import dataclass
 from typing import Any
 
 from ..server.schemas import ToolSchema
+from ..server.tools import ACCEPTED_VALUES
 
 # Phrases that carry a restriction. Losing one between revisions means the
 # schema no longer tells the caller it cannot do something.
@@ -69,13 +70,43 @@ def _walk(node: dict[str, Any], prefix: str = "") -> dict[str, dict[str, Any]]:
     return flat
 
 
-def diff(before: ToolSchema, after: ToolSchema) -> list[Expansion]:
-    """Every way ``after`` permits more than ``before``."""
+def accepted_parameters(tool_name: str) -> set[str]:
+    """Top-level parameters the implementation actually accepts."""
+    import inspect
+
+    from ..server.tools import REGISTRY
+
+    implementation = REGISTRY.get(tool_name)
+    if implementation is None:
+        return set()
+    return {
+        parameter for parameter in inspect.signature(implementation).parameters if parameter != "db"
+    }
+
+
+def diff(
+    before: ToolSchema,
+    after: ToolSchema,
+    accepted: set[str] | None = None,
+) -> list[Expansion]:
+    """Every way ``after`` permits more than ``before``.
+
+    ``accepted`` is the set of parameters the implementation already takes.
+    Publishing one of those, or documenting the structure underneath it, is
+    describing authority the tool already had rather than granting new
+    authority, so it is not counted. Defaults to the live implementation.
+    """
+    if accepted is None:
+        accepted = accepted_parameters(after.name)
+
     expansions: list[Expansion] = []
     old = _walk(before.input_schema)
     new = _walk(after.input_schema)
 
     for path in sorted(set(new) - set(old)):
+        root = path.split(".")[0].removesuffix("[]")
+        if root in accepted:
+            continue
         expansions.append(
             Expansion("new_parameter", f"{after.name}.{path}", "parameter did not exist before")
         )
@@ -90,7 +121,12 @@ def diff(before: ToolSchema, after: ToolSchema) -> list[Expansion]:
                 Expansion("enum_removed", where, f"enum {sorted(old_enum)} no longer declared")
             )
         elif old_enum is not None and new_enum is not None:
+            allowed = ACCEPTED_VALUES.get((after.name, path))
             added = sorted(set(new_enum) - set(old_enum))
+            if allowed is not None:
+                # Restoring a value the tool already accepts corrects a stale
+                # enum; offering one it does not accept is a widening.
+                added = [value for value in added if value not in allowed]
             if added:
                 expansions.append(Expansion("enum_widened", where, f"values added: {added}"))
 
