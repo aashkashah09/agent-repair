@@ -10,8 +10,10 @@ elsewhere. Three things are checked, in this order:
 2. Target improvement. The tasks whose failures were attributed to this tool
    must improve, with a paired bootstrap interval that excludes zero.
 3. Collateral. On every other task, the paired interval's lower bound must stay
-   above the tolerance, which is not zero: sampling alone moves a handful of
-   tasks either way between two evaluations of an unchanged suite.
+   above the tolerance. The tolerance is not zero: sampling alone moves a
+   handful of tasks in either direction between any two evaluations of an
+   unchanged suite, so a rule that rejected on a single task moving down would
+   reject almost everything. The criterion has to be an interval.
 
 Each decision also records what two weaker gates would have concluded from the
 same evidence: one comparing point estimates only, and one with a single sample
@@ -83,22 +85,23 @@ def _counterfactuals(
     after: dict[str, list[bool]],
     target_tasks: list[str],
 ) -> dict[str, bool]:
-    """What a point-estimate gate and a k=1 gate would have concluded."""
+    """What two weaker gates would have concluded from the same evidence.
+
+    The point-estimate gate promotes whenever aggregate reliability went up,
+    with no interval and no separate collateral test -- the comparison anyone
+    makes by reading two summary numbers side by side. The k=1 gate applies the
+    same rule to a single sample per task, which is what an evaluation without
+    repeated sampling would have seen.
+    """
     before_rate = per_task_rate(before)
     after_rate = per_task_rate(after)
-    others = sorted(set(before_rate) & set(after_rate) - set(target_tasks))
+    shared = sorted(set(before_rate) & set(after_rate))
 
-    target_gain = sum(after_rate[t] - before_rate[t] for t in target_tasks)
-    collateral_change = sum(after_rate[t] - before_rate[t] for t in others)
-    point_estimate = target_gain > 0 and collateral_change >= 0
+    point_estimate = sum(after_rate[t] - before_rate[t] for t in shared) > 0
 
-    first_before = {task: results[:1] for task, results in before.items()}
-    first_after = {task: results[:1] for task, results in after.items()}
-    k1_before = per_task_rate(first_before)
-    k1_after = per_task_rate(first_after)
-    k1_target = sum(k1_after[t] - k1_before[t] for t in target_tasks)
-    k1_collateral = sum(k1_after[t] - k1_before[t] for t in others)
-    k1 = k1_target > 0 and k1_collateral >= 0
+    k1_before = per_task_rate({task: results[:1] for task, results in before.items()})
+    k1_after = per_task_rate({task: results[:1] for task, results in after.items()})
+    k1 = sum(k1_after[t] - k1_before[t] for t in shared) > 0
 
     return {"point_estimate_gate": bool(point_estimate), "k1_gate": bool(k1)}
 

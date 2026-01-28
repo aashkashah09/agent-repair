@@ -112,6 +112,28 @@ def test_decision_records_both_counterfactuals():
     assert set(decision.counterfactual) == {"point_estimate_gate", "k1_gate"}
 
 
+def test_the_point_estimate_gate_reads_the_aggregate_only():
+    # Twenty target tasks gain five samples each; eighty others lose two. The
+    # gate rejects it on the collateral interval, but the totals still net out
+    # negative, so the weaker gate would reject it too.
+    heavy = run(suite(2, 6), suite(7, 4))
+    assert heavy.decision == REJECTED_REGRESSION
+    assert heavy.counterfactual["point_estimate_gate"] is False
+
+    # The same target gain against a lighter collateral cost nets out positive:
+    # the aggregate improved, so the weaker gate ships a revision this one
+    # still rejects.
+    before = suite(2, 7)
+    after = {task: list(results) for task, results in before.items()}
+    for task in TARGETS:
+        after[task] = [True] * 7 + [False]
+    for task in OTHERS[:60]:
+        after[task] = [True] * 6 + [False] * 2
+    light = run(before, after)
+    assert light.decision == REJECTED_REGRESSION
+    assert light.counterfactual["point_estimate_gate"] is True
+
+
 def test_reason_is_populated_for_every_outcome():
     for before, after, revised in (
         (suite(2, 6), suite(7, 6), None),
