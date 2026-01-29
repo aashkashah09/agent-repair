@@ -1,0 +1,49 @@
+{
+  "name": "create_order",
+  "description": "Place a new order for a customer and reserve stock for every line item. Items are given by SKU, not product_id; get_product_detail resolves one to the other. payment_method_id must already be on the account. address_id may be omitted only when the account has exactly one saved address. The order is created in the pending state, from which it can still be modified or cancelled.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "items": {
+        "type": "array",
+        "description": "Line items to order.",
+        "items": {
+          "type": "object"
+        },
+        "minItems": 1
+      },
+      "payment_method_id": {
+        "type": "string",
+        "description": "A payment_method_id from the customer's account, e.g. PM001."
+      },
+      "address_id": {
+        "type": "string",
+        "description": "A saved address_id to ship to."
+      }
+    },
+    "required": [
+      "customer_id",
+      "items",
+      "payment_method_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "The customer, or a SKU in items, does not exist."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "items is empty, quantity is below 1, the payment method or address is not on the account, or address_id was omitted on a multi-address account."
+    },
+    {
+      "code": "insufficient_stock",
+      "when": "A requested SKU has fewer units available than the quantity asked for. The response names the units available."
+    }
+  ],
+  "revision": 0
+}

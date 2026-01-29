@@ -1,0 +1,50 @@
+{
+  "name": "list_orders",
+  "description": "List a customer's orders, newest first, as summaries. The response is paginated at 20 orders per page: total_matches gives the full count and next_cursor is non-null while pages remain. Pass next_cursor back as cursor for the following page.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "status": {
+        "type": "string",
+        "description": "Return only orders in this state.",
+        "enum": [
+          "pending",
+          "processing",
+          "shipped",
+          "delivered",
+          "cancelled",
+          "returned"
+        ]
+      },
+      "since": {
+        "type": "string",
+        "description": "Return only orders placed at or after this moment, as an ISO-8601 instant with a UTC offset, for example 2026-01-01T00:00:00Z."
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Orders per page, up to 20.",
+        "default": 20,
+        "minimum": 1,
+        "maximum": 20
+      },
+      "cursor": {
+        "type": "string",
+        "description": "The next_cursor value from a previous call. Omit for the first page."
+      }
+    },
+    "required": [
+      "customer_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "invalid_argument",
+      "when": "since is not an ISO-8601 instant with an offset."
+    }
+  ],
+  "revision": 1
+}
