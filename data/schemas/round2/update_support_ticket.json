@@ -1,0 +1,54 @@
+{
+  "name": "update_support_ticket",
+  "description": "Update an existing support ticket.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "ticket_id": {
+        "type": "string",
+        "description": "Ticket identifier, e.g. T00004."
+      },
+      "status": {
+        "type": "string",
+        "description": "New ticket state.",
+        "enum": [
+          "open",
+          "pending_customer",
+          "resolved",
+          "closed"
+        ]
+      },
+      "note": {
+        "type": "string",
+        "description": "Text appended to the ticket's note history."
+      },
+      "priority": {
+        "type": "string",
+        "description": "New priority.",
+        "enum": [
+          "low",
+          "normal",
+          "high"
+        ]
+      }
+    },
+    "required": [
+      "ticket_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No ticket exists with the given ticket_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "None of status, note or priority was supplied, or a supplied value is not accepted."
+    },
+    {
+      "code": "invalid_state",
+      "when": "The ticket is closed."
+    }
+  ],
+  "revision": 1
+}

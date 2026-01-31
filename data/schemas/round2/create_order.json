@@ -1,0 +1,64 @@
+{
+  "name": "create_order",
+  "description": "Place an order and reserve stock for every line. Items are named by SKU rather than product_id, and payment_method_id must already be on the account. Orders are created pending.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "items": {
+        "type": "array",
+        "description": "Line items to order, each an object with a sku and an optional quantity that defaults to 1. At least one entry is required.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string",
+              "description": "Variant identifier, e.g. P0007-02."
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Units to order.",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          "required": [
+            "sku"
+          ]
+        },
+        "minItems": 1
+      },
+      "payment_method_id": {
+        "type": "string",
+        "description": "A payment_method_id from the customer's account, e.g. PM001."
+      },
+      "address_id": {
+        "type": "string",
+        "description": "A saved address_id to ship to."
+      }
+    },
+    "required": [
+      "customer_id",
+      "items",
+      "payment_method_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "The customer, or a SKU in items, does not exist."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "items is empty, quantity is below 1, or the payment method is not on the account."
+    },
+    {
+      "code": "insufficient_stock",
+      "when": "A SKU has fewer units available than requested."
+    }
+  ],
+  "revision": 1
+}
