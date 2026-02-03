@@ -1,0 +1,27 @@
+{
+  "proposed": 31,
+  "accepted": 19,
+  "rejected_regression": 9,
+  "rejected_no_gain": 0,
+  "blocked_permission_expansion": 3,
+  "regression_rejections_a_point_estimate_gate_would_have_shipped": 9,
+  "regression_rejections_a_k1_gate_would_have_shipped": 6,
+  "by_round": {
+    "1": {
+      "proposed": 10,
+      "accepted": 7
+    },
+    "2": {
+      "proposed": 9,
+      "accepted": 6
+    },
+    "3": {
+      "proposed": 7,
+      "accepted": 4
+    },
+    "4": {
+      "proposed": 5,
+      "accepted": 2
+    }
+  }
+}
