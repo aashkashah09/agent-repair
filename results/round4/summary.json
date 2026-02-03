@@ -1,0 +1,37 @@
+{
+  "run": "round4",
+  "schema_set": "data/schemas/round4",
+  "schema_set_digest": "cb8d6a18d7f5d784",
+  "defects": "data/defects/seeded_defects.json",
+  "config": "default",
+  "config_fingerprint": "48b6e28fa512",
+  "seed": 20260105,
+  "user_mode": "adversarial",
+  "models": {
+    "agent": "claude-sonnet-5",
+    "user_sim": "claude-sonnet-5",
+    "effort": "medium"
+  },
+  "tasks": 100,
+  "samples_per_task": 8,
+  "runs": 800,
+  "successes": 552,
+  "pass_1": 0.69,
+  "pass_k": 0.41,
+  "pass_k_over_pass_1": 0.5942,
+  "ended_by": {
+    "user": 797,
+    "turn_limit": 3
+  },
+  "mean_turns": 5.128,
+  "mean_tool_calls": 4.25,
+  "token_usage": {
+    "agent_input": 44726823,
+    "agent_output": 1022286,
+    "user_input": 3720128,
+    "user_output": 202663
+  },
+  "wall_clock_s": 36792.6,
+  "started_at": "2026-02-02T22:19:35Z",
+  "finished_at": "2026-02-03T08:32:47Z"
+}

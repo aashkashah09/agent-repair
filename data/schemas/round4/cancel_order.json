@@ -1,0 +1,42 @@
+{
+  "name": "cancel_order",
+  "description": "Cancel an order and release the stock it was holding. Only orders that have not shipped can be cancelled: an order that is shipped or delivered is rejected with invalid_state, and so is one that is already cancelled. Cancelling does not return any money -- issue a refund separately once the order is cancelled.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      },
+      "reason": {
+        "type": "string",
+        "description": "Why the order is being cancelled, recorded on the order. Must be one of no_longer_needed, ordered_by_mistake, found_better_price or defective_or_damaged; any other value is rejected.",
+        "enum": [
+          "no_longer_needed",
+          "ordered_by_mistake",
+          "found_better_price",
+          "defective_or_damaged"
+        ]
+      }
+    },
+    "required": [
+      "order_id",
+      "reason"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No order exists with the given order_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "reason is not one of the four accepted values."
+    },
+    {
+      "code": "invalid_state",
+      "when": "The order is already cancelled, shipped or delivered."
+    }
+  ],
+  "revision": 1
+}

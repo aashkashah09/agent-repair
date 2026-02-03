@@ -1,0 +1,27 @@
+{
+  "name": "get_product_detail",
+  "description": "Return product information including price, options and availability.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "product_id": {
+        "type": "string",
+        "description": "Catalogue product identifier, e.g. P0007. Not a SKU."
+      }
+    },
+    "required": [
+      "product_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No product exists with the given product_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "product_id is empty."
+    }
+  ],
+  "revision": 1
+}
