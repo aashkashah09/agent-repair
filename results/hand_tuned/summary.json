@@ -1,0 +1,36 @@
+{
+  "run": "hand_tuned",
+  "schema_set": "data/schemas/clean",
+  "schema_set_digest": "f7a26f3a02c461c4",
+  "defects": null,
+  "config": "hand_tuned",
+  "config_fingerprint": "30fe254f1f8e",
+  "seed": 20260105,
+  "user_mode": "adversarial",
+  "models": {
+    "agent": "claude-sonnet-5",
+    "user_sim": "claude-sonnet-5",
+    "effort": "medium"
+  },
+  "tasks": 100,
+  "samples_per_task": 8,
+  "runs": 800,
+  "successes": 592,
+  "pass_1": 0.74,
+  "pass_k": 0.47,
+  "pass_k_over_pass_1": 0.63514,
+  "ended_by": {
+    "user": 800
+  },
+  "mean_turns": 4.851,
+  "mean_tool_calls": 3.931,
+  "token_usage": {
+    "agent_input": 40416892,
+    "agent_output": 959329,
+    "user_input": 3396397,
+    "user_output": 192418
+  },
+  "wall_clock_s": 35053.9,
+  "started_at": "2026-02-03T21:54:08Z",
+  "finished_at": "2026-02-04T07:38:21Z"
+}
