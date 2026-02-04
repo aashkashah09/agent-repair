@@ -22,6 +22,7 @@ per task. Those counterfactuals are what make the gate's cost legible.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -195,6 +196,51 @@ def _decide(
         f"[{target.ci_low:+.2f}, {target.ci_high:+.2f}]; non-target tasks "
         f"{collateral.mean:+.2f}, 95% CI [{collateral.ci_low:+.2f}, {collateral.ci_high:+.2f}]",
     )
+
+
+def replay(decision: dict[str, Any], config: GateConfig) -> str:
+    """Re-decide a recorded revision under a different set of thresholds.
+
+    The interval a revision produced is a property of the evaluation, not of
+    the thresholds, so a decision can be replayed against other settings
+    without re-running anything.
+    """
+    if config.block_permission_expansion and decision["permission_expansions"]:
+        return BLOCKED_PERMISSION
+    target, collateral = decision["target"], decision["collateral"]
+    if target["mean"] < config.min_target_delta * 100.0 or target["ci_low"] <= 0.0:
+        return REJECTED_NO_GAIN
+    if collateral["ci_low"] < config.max_collateral_regression * 100.0:
+        return REJECTED_REGRESSION
+    return ACCEPTED
+
+
+def sensitivity(
+    decisions: list[dict[str, Any]],
+    tolerances: Sequence[float] = (-0.01, -0.02, -0.03, -0.04, -0.05, -0.08),
+    minimum_gains: Sequence[float] = (0.02, 0.05, 0.10),
+) -> dict[str, Any]:
+    """How the ledger moves as the two thresholds are swept.
+
+    Reported so that the headline split can be read against its neighbours
+    rather than taken on its own.
+    """
+    grid = []
+    for tolerance in tolerances:
+        for gain in minimum_gains:
+            config = GateConfig(min_target_delta=gain, max_collateral_regression=tolerance)
+            outcomes = [replay(decision, config) for decision in decisions]
+            grid.append(
+                {
+                    "max_collateral_regression": tolerance,
+                    "min_target_delta": gain,
+                    "accepted": outcomes.count(ACCEPTED),
+                    "rejected_regression": outcomes.count(REJECTED_REGRESSION),
+                    "rejected_no_gain": outcomes.count(REJECTED_NO_GAIN),
+                    "blocked_permission_expansion": outcomes.count(BLOCKED_PERMISSION),
+                }
+            )
+    return {"proposed": len(decisions), "grid": grid}
 
 
 def tally(decisions: list[dict[str, Any]]) -> dict[str, Any]:

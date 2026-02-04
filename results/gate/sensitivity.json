@@ -1,0 +1,149 @@
+{
+  "proposed": 31,
+  "grid": [
+    {
+      "max_collateral_regression": -0.01,
+      "min_target_delta": 0.02,
+      "accepted": 2,
+      "rejected_regression": 26,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.01,
+      "min_target_delta": 0.05,
+      "accepted": 2,
+      "rejected_regression": 26,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.01,
+      "min_target_delta": 0.1,
+      "accepted": 2,
+      "rejected_regression": 26,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.02,
+      "min_target_delta": 0.02,
+      "accepted": 9,
+      "rejected_regression": 19,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.02,
+      "min_target_delta": 0.05,
+      "accepted": 9,
+      "rejected_regression": 19,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.02,
+      "min_target_delta": 0.1,
+      "accepted": 9,
+      "rejected_regression": 19,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.03,
+      "min_target_delta": 0.02,
+      "accepted": 19,
+      "rejected_regression": 9,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.03,
+      "min_target_delta": 0.05,
+      "accepted": 19,
+      "rejected_regression": 9,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.03,
+      "min_target_delta": 0.1,
+      "accepted": 19,
+      "rejected_regression": 9,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.04,
+      "min_target_delta": 0.02,
+      "accepted": 22,
+      "rejected_regression": 6,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.04,
+      "min_target_delta": 0.05,
+      "accepted": 22,
+      "rejected_regression": 6,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.04,
+      "min_target_delta": 0.1,
+      "accepted": 22,
+      "rejected_regression": 6,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.05,
+      "min_target_delta": 0.02,
+      "accepted": 26,
+      "rejected_regression": 2,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.05,
+      "min_target_delta": 0.05,
+      "accepted": 26,
+      "rejected_regression": 2,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.05,
+      "min_target_delta": 0.1,
+      "accepted": 26,
+      "rejected_regression": 2,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.08,
+      "min_target_delta": 0.02,
+      "accepted": 28,
+      "rejected_regression": 0,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.08,
+      "min_target_delta": 0.05,
+      "accepted": 28,
+      "rejected_regression": 0,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    },
+    {
+      "max_collateral_regression": -0.08,
+      "min_target_delta": 0.1,
+      "accepted": 28,
+      "rejected_regression": 0,
+      "rejected_no_gain": 0,
+      "blocked_permission_expansion": 3
+    }
+  ]
+}

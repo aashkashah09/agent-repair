@@ -13,7 +13,7 @@ from .config import REPO_ROOT, load_config
 from .eval.bootstrap import compare as compare_outcomes
 from .eval.harness import Harness, load_outcomes, load_runs
 from .eval.metrics import summarise
-from .optimizer.gate import tally
+from .optimizer.gate import sensitivity, tally
 from .optimizer.loop import RepairLoop
 from .server.mcp_server import serve_stdio
 from .server.schemas import SchemaSet
@@ -110,6 +110,19 @@ def cmd_gate_report(args: argparse.Namespace) -> None:
         print(json.dumps(payload, indent=2))
 
 
+def cmd_gate_sensitivity(args: argparse.Namespace) -> None:
+    decisions = [
+        json.loads(line)
+        for line in Path(args.decisions).read_text().splitlines()
+        if line.strip()
+    ]
+    payload = sensitivity(decisions)
+    if args.out:
+        _write(Path(args.out), payload)
+    else:
+        print(json.dumps(payload, indent=2))
+
+
 def cmd_repair(args: argparse.Namespace) -> None:
     config = load_config(args.config)
     loop = RepairLoop(
@@ -190,6 +203,11 @@ def build_parser() -> argparse.ArgumentParser:
     gate.add_argument("--decisions", default="results/gate/decisions.jsonl")
     gate.add_argument("--out")
     gate.set_defaults(func=cmd_gate_report)
+
+    sweep = sub.add_parser("gate-sensitivity", help="replay the ledger at other thresholds")
+    sweep.add_argument("--decisions", default="results/gate/decisions.jsonl")
+    sweep.add_argument("--out")
+    sweep.set_defaults(func=cmd_gate_sensitivity)
 
     repair = sub.add_parser("repair", help="run the repair loop")
     repair.add_argument("--config", default=DEFAULT_CONFIG)

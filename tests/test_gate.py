@@ -8,6 +8,8 @@ from toolsmith.optimizer.gate import (
     REJECTED_NO_GAIN,
     REJECTED_REGRESSION,
     evaluate,
+    replay,
+    sensitivity,
     tally,
 )
 from toolsmith.server.schemas import ToolSchema
@@ -186,3 +188,54 @@ def test_collateral_and_target_partition_the_suite():
     decision = run(suite(2, 6), suite(7, 6))
     assert decision.target["n"] + decision.collateral["n"] == decision.overall["n"]
     assert decision.overall["n"] == pytest.approx(100)
+
+
+# -- replaying a recorded ledger ----------------------------------------
+
+
+def recorded(decision, target_mean, target_low, collateral_low, expansions=()):
+    return {
+        "decision": decision,
+        "target": {"mean": target_mean, "ci_low": target_low},
+        "collateral": {"ci_low": collateral_low},
+        "permission_expansions": list(expansions),
+    }
+
+
+def test_replay_reproduces_a_decision_at_its_own_thresholds():
+    accepted = recorded(ACCEPTED, 40.0, 30.0, -1.0)
+    assert replay(accepted, CONFIG) == ACCEPTED
+
+
+def test_replay_flips_a_rejection_when_the_tolerance_widens():
+    rejected = recorded(REJECTED_REGRESSION, 40.0, 30.0, -4.0)
+    assert replay(rejected, CONFIG) == REJECTED_REGRESSION
+    assert replay(rejected, GateConfig(max_collateral_regression=-0.05)) == ACCEPTED
+
+
+def test_replay_keeps_blocking_regardless_of_thresholds():
+    blocked = recorded(BLOCKED_PERMISSION, 60.0, 50.0, 0.0,
+                       [{"kind": "enum_widened", "where": "x", "detail": "y"}])
+    for tolerance in (-0.01, -0.5):
+        assert replay(blocked, GateConfig(max_collateral_regression=tolerance)) == BLOCKED_PERMISSION
+    assert replay(blocked, GateConfig(block_permission_expansion=False)) == ACCEPTED
+
+
+def test_sensitivity_grid_is_monotone_in_the_tolerance():
+    decisions = [
+        recorded(ACCEPTED, 40.0, 30.0, -0.5),
+        recorded(REJECTED_REGRESSION, 40.0, 30.0, -3.5),
+        recorded(REJECTED_REGRESSION, 40.0, 30.0, -6.0),
+        recorded(BLOCKED_PERMISSION, 40.0, 30.0, 0.0, [{"kind": "k", "where": "w", "detail": "d"}]),
+    ]
+    grid = sensitivity(decisions, tolerances=(-0.01, -0.04, -0.07), minimum_gains=(0.05,))["grid"]
+    accepted = [row["accepted"] for row in grid]
+    assert accepted == sorted(accepted)
+    assert all(row["blocked_permission_expansion"] == 1 for row in grid)
+
+
+def test_sensitivity_reports_every_combination():
+    decisions = [recorded(ACCEPTED, 40.0, 30.0, -0.5)]
+    out = sensitivity(decisions, tolerances=(-0.02, -0.04), minimum_gains=(0.05, 0.10))
+    assert out["proposed"] == 1
+    assert len(out["grid"]) == 4
