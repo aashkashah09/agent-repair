@@ -8,6 +8,7 @@ The optimizer rewrites these documents; the tool implementations never change.
 
 from __future__ import annotations
 
+import hashlib
 import json
 from copy import deepcopy
 from dataclasses import dataclass
@@ -145,6 +146,15 @@ class SchemaSet:
 
     def declarations(self) -> list[dict[str, Any]]:
         return [self.tools[name].to_mcp() for name in TOOL_ORDER]
+
+    def digest(self) -> str:
+        """Content hash of the declarations the agent would be handed.
+
+        A run records the path it loaded schemas from, which stops identifying
+        anything the moment those files are edited. This pins the actual text.
+        """
+        blob = json.dumps(self.declarations(), sort_keys=True, separators=(",", ":"))
+        return hashlib.sha256(blob.encode()).hexdigest()[:16]
 
     def validate(self) -> None:
         """Check the set is internally coherent and matches the implementations."""

@@ -23,6 +23,7 @@ from ..config import Config
 from ..llm import Client
 from ..server.db import Database
 from ..server.mcp_server import ToolServer
+from ..server.schemas import SchemaSet
 from .metrics import group_by_task, summarise
 from .tasks import Task, load_tasks
 
@@ -145,6 +146,7 @@ class Harness:
         summary = {
             "run": run_name,
             "schema_set": str(Path(self.schema_dir).relative_to(self.config.resolve("."))),
+            "schema_set_digest": SchemaSet.load(self.schema_dir).digest(),
             "defects": (
                 str(Path(self.defects_path).relative_to(self.config.resolve(".")))
                 if self.defects_path
