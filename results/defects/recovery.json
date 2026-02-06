@@ -1,0 +1,329 @@
+{
+  "seeded": 24,
+  "resolved": 17,
+  "unresolved": 7,
+  "recovery": 0.7083,
+  "by_severity": {
+    "severe": {
+      "seeded": 8,
+      "resolved": 7
+    },
+    "moderate": {
+      "seeded": 8,
+      "resolved": 8
+    },
+    "mild": {
+      "seeded": 8,
+      "resolved": 2
+    }
+  },
+  "by_pattern": {
+    "ambiguous-datetime": {
+      "seeded": 3,
+      "resolved": 2
+    },
+    "near-duplicate-tool-naming": {
+      "seeded": 3,
+      "resolved": 1
+    },
+    "overloaded-tool-mode": {
+      "seeded": 3,
+      "resolved": 2
+    },
+    "silent-empty-return": {
+      "seeded": 3,
+      "resolved": 2
+    },
+    "silent-pagination-truncation": {
+      "seeded": 3,
+      "resolved": 2
+    },
+    "undocumented-enum": {
+      "seeded": 3,
+      "resolved": 2
+    },
+    "unstated-precondition": {
+      "seeded": 3,
+      "resolved": 3
+    },
+    "untyped-passthrough": {
+      "seeded": 3,
+      "resolved": 3
+    }
+  },
+  "by_round": {
+    "1": 7,
+    "2": 6,
+    "3": 4,
+    "4": 0
+  },
+  "defects": [
+    {
+      "defect_id": "D01",
+      "pattern": "undocumented-enum",
+      "severity": "severe",
+      "tools": [
+        "cancel_order"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-01"
+    },
+    {
+      "defect_id": "D02",
+      "pattern": "undocumented-enum",
+      "severity": "moderate",
+      "tools": [
+        "create_support_ticket"
+      ],
+      "resolved": true,
+      "resolved_in_round": 2,
+      "resolved_by": "R2-01"
+    },
+    {
+      "defect_id": "D03",
+      "pattern": "undocumented-enum",
+      "severity": "mild",
+      "tools": [
+        "update_support_ticket"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    },
+    {
+      "defect_id": "D04",
+      "pattern": "silent-empty-return",
+      "severity": "severe",
+      "tools": [
+        "search_products"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-02"
+    },
+    {
+      "defect_id": "D05",
+      "pattern": "silent-empty-return",
+      "severity": "moderate",
+      "tools": [
+        "track_shipment"
+      ],
+      "resolved": true,
+      "resolved_in_round": 2,
+      "resolved_by": "R2-02"
+    },
+    {
+      "defect_id": "D06",
+      "pattern": "silent-empty-return",
+      "severity": "mild",
+      "tools": [
+        "list_orders"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    },
+    {
+      "defect_id": "D07",
+      "pattern": "ambiguous-datetime",
+      "severity": "severe",
+      "tools": [
+        "list_orders"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-03"
+    },
+    {
+      "defect_id": "D08",
+      "pattern": "ambiguous-datetime",
+      "severity": "moderate",
+      "tools": [
+        "check_inventory"
+      ],
+      "resolved": true,
+      "resolved_in_round": 3,
+      "resolved_by": "R3-01"
+    },
+    {
+      "defect_id": "D09",
+      "pattern": "ambiguous-datetime",
+      "severity": "mild",
+      "tools": [
+        "track_shipment"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    },
+    {
+      "defect_id": "D10",
+      "pattern": "overloaded-tool-mode",
+      "severity": "severe",
+      "tools": [
+        "modify_order_items"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-04"
+    },
+    {
+      "defect_id": "D11",
+      "pattern": "overloaded-tool-mode",
+      "severity": "moderate",
+      "tools": [
+        "update_support_ticket"
+      ],
+      "resolved": true,
+      "resolved_in_round": 3,
+      "resolved_by": "R3-02"
+    },
+    {
+      "defect_id": "D12",
+      "pattern": "overloaded-tool-mode",
+      "severity": "mild",
+      "tools": [
+        "process_refund"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    },
+    {
+      "defect_id": "D13",
+      "pattern": "unstated-precondition",
+      "severity": "severe",
+      "tools": [
+        "process_refund"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-05"
+    },
+    {
+      "defect_id": "D14",
+      "pattern": "unstated-precondition",
+      "severity": "moderate",
+      "tools": [
+        "modify_order_items"
+      ],
+      "resolved": true,
+      "resolved_in_round": 2,
+      "resolved_by": "R2-03"
+    },
+    {
+      "defect_id": "D15",
+      "pattern": "unstated-precondition",
+      "severity": "mild",
+      "tools": [
+        "create_order"
+      ],
+      "resolved": true,
+      "resolved_in_round": 3,
+      "resolved_by": "R3-03"
+    },
+    {
+      "defect_id": "D16",
+      "pattern": "near-duplicate-tool-naming",
+      "severity": "severe",
+      "tools": [
+        "get_product_detail",
+        "check_inventory"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    },
+    {
+      "defect_id": "D17",
+      "pattern": "near-duplicate-tool-naming",
+      "severity": "moderate",
+      "tools": [
+        "search_products",
+        "get_product_detail"
+      ],
+      "resolved": true,
+      "resolved_in_round": 2,
+      "resolved_by": "R2-04"
+    },
+    {
+      "defect_id": "D18",
+      "pattern": "near-duplicate-tool-naming",
+      "severity": "mild",
+      "tools": [
+        "create_support_ticket",
+        "update_support_ticket"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    },
+    {
+      "defect_id": "D19",
+      "pattern": "untyped-passthrough",
+      "severity": "severe",
+      "tools": [
+        "update_customer_profile"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-06"
+    },
+    {
+      "defect_id": "D20",
+      "pattern": "untyped-passthrough",
+      "severity": "moderate",
+      "tools": [
+        "create_order"
+      ],
+      "resolved": true,
+      "resolved_in_round": 2,
+      "resolved_by": "R2-05"
+    },
+    {
+      "defect_id": "D21",
+      "pattern": "untyped-passthrough",
+      "severity": "mild",
+      "tools": [
+        "search_products"
+      ],
+      "resolved": true,
+      "resolved_in_round": 3,
+      "resolved_by": "R3-04"
+    },
+    {
+      "defect_id": "D22",
+      "pattern": "silent-pagination-truncation",
+      "severity": "severe",
+      "tools": [
+        "list_orders"
+      ],
+      "resolved": true,
+      "resolved_in_round": 1,
+      "resolved_by": "R1-03"
+    },
+    {
+      "defect_id": "D23",
+      "pattern": "silent-pagination-truncation",
+      "severity": "moderate",
+      "tools": [
+        "search_products"
+      ],
+      "resolved": true,
+      "resolved_in_round": 2,
+      "resolved_by": "R2-04"
+    },
+    {
+      "defect_id": "D24",
+      "pattern": "silent-pagination-truncation",
+      "severity": "mild",
+      "tools": [
+        "track_shipment"
+      ],
+      "resolved": false,
+      "resolved_in_round": null,
+      "resolved_by": null
+    }
+  ]
+}
