@@ -1,0 +1,27 @@
+{
+  "name": "get_order",
+  "description": "Return one order in full. Worked example: to answer \"where is my order\", call this, read status, and report it to the customer; delivered and shipped orders are complete and need no further lookup. status is the single field that determines what can still be done with an order, so read it before any other call and act on it directly.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      }
+    },
+    "required": [
+      "order_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No order exists with the given order_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "order_id is empty."
+    }
+  ],
+  "revision": 1
+}

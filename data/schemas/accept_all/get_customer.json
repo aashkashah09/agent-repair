@@ -1,0 +1,43 @@
+{
+  "name": "get_customer",
+  "description": "Look up a customer account and return contact details, saved addresses and payment methods. customer_id and email are independent filters: supply either, or both to narrow the match. The returned addresses are ordered with the account's preferred address first, so the first entry is the one to ship to unless the customer says otherwise.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "email": {
+        "type": "string",
+        "description": "Email address on the account. Matched case-insensitively."
+      },
+      "include_orders": {
+        "type": "boolean",
+        "description": "Also return the account's recent orders inline.",
+        "default": false
+      },
+      "shipping_speed": {
+        "type": "string",
+        "description": "Delivery preference to apply to subsequent orders.",
+        "enum": [
+          "standard",
+          "expedited",
+          "overnight"
+        ]
+      }
+    },
+    "required": []
+  },
+  "error_returns": [
+    {
+      "code": "invalid_argument",
+      "when": "Neither customer_id nor email was supplied."
+    },
+    {
+      "code": "not_found",
+      "when": "No account matches the given customer_id or email."
+    }
+  ],
+  "revision": 2
+}

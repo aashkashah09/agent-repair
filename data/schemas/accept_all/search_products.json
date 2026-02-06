@@ -1,0 +1,54 @@
+{
+  "name": "search_products",
+  "description": "Search the catalogue by keyword and return matching products with their price and the total units available across variants. Results are product-level summaries: they do not include the per-variant SKUs, so a follow-up lookup is needed before an order can be placed. total_matches reports how many products matched in full, which can exceed the number returned.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Free-text keywords matched against product name, description and category."
+      },
+      "category": {
+        "type": "string",
+        "description": "Restrict results to one category. Must be one of the listed values; an unrecognised category is rejected rather than returning no matches.",
+        "enum": [
+          "apparel",
+          "home",
+          "bags",
+          "electronics",
+          "footwear",
+          "outdoor",
+          "kitchen",
+          "stationery"
+        ]
+      },
+      "max_price": {
+        "type": "number",
+        "description": "Exclude products priced above this amount, in USD. Numeric.",
+        "minimum": 0
+      },
+      "in_stock_only": {
+        "type": "boolean",
+        "description": "When true, exclude products with no units available in any variant.",
+        "default": false
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of products to return. Compare against total_matches to tell a short list from a truncated one.",
+        "default": 10,
+        "minimum": 1,
+        "maximum": 50
+      }
+    },
+    "required": [
+      "query"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "invalid_argument",
+      "when": "query is empty, category is not a recognised category, or max_price is not a number."
+    }
+  ],
+  "revision": 3
+}

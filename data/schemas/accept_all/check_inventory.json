@@ -1,0 +1,27 @@
+{
+  "name": "check_inventory",
+  "description": "Return the stock position for one SKU. Worked example: to answer \"is the medium in stock\", call this with the medium's SKU and read units available; if it is zero, restock_eta carries the date the next shipment lands, and if that date is close the customer is usually better off waiting than substituting. Restock dates are supplied by the vendor and move, so treat them as guidance rather than a commitment.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "sku": {
+        "type": "string",
+        "description": "Variant identifier in the form <product_id>-<nn>, e.g. P0007-02."
+      }
+    },
+    "required": [
+      "sku"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No inventory record exists for the given sku."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "sku is empty."
+    }
+  ],
+  "revision": 2
+}

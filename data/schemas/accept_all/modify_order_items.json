@@ -1,0 +1,72 @@
+{
+  "name": "modify_order_items",
+  "description": "Change the line items on an order and adjust its stock reservations. The order must still be pending. mode selects the operation: add takes sku and quantity, remove takes sku with an optional quantity, replace takes sku and replacement_sku. Each entry in items must carry a quantity, which the server reads in every mode; where a mode does not use it, pass the line's current quantity so the entry is well formed.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "order_id": {
+        "type": "string",
+        "description": "Order identifier, e.g. W00042."
+      },
+      "mode": {
+        "type": "string",
+        "description": "Which of add, remove or replace to apply to every entry in items.",
+        "enum": [
+          "add",
+          "remove",
+          "replace"
+        ]
+      },
+      "items": {
+        "type": "array",
+        "description": "Entries to apply. Which fields each entry needs depends on mode.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string",
+              "description": "Variant identifier. In replace mode, the line being changed."
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Units. Required in add mode, optional in remove mode, unused in replace mode.",
+              "minimum": 1
+            },
+            "replacement_sku": {
+              "type": "string",
+              "description": "The variant to swap in. Required in replace mode only."
+            }
+          },
+          "required": [
+            "sku"
+          ]
+        },
+        "minItems": 1
+      }
+    },
+    "required": [
+      "order_id",
+      "mode",
+      "items"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "The order does not exist, or a named SKU is not on it."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "mode is not add, remove or replace; items is empty; a replace entry has no replacement_sku; the quantity removed exceeds the line; or the change would leave the order empty."
+    },
+    {
+      "code": "invalid_state",
+      "when": "The order is not pending."
+    },
+    {
+      "code": "insufficient_stock",
+      "when": "An add or replace needs more units than exist."
+    }
+  ],
+  "revision": 3
+}

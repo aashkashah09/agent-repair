@@ -1,0 +1,63 @@
+{
+  "name": "create_order",
+  "description": "Place an order and reserve stock for every line. Items are named by SKU rather than product_id. payment_method_id must already be on the account. address_id may be omitted only when the account has exactly one saved address; on an account with more than one it is required. Orders are created pending and can still be modified or cancelled from there. When payment_method_id is omitted the account default is used.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "customer_id": {
+        "type": "string",
+        "description": "Account identifier, e.g. C0012."
+      },
+      "items": {
+        "type": "array",
+        "description": "Line items to order, each an object with a sku and an optional quantity that defaults to 1. At least one entry is required.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sku": {
+              "type": "string",
+              "description": "Variant identifier, e.g. P0007-02."
+            },
+            "quantity": {
+              "type": "integer",
+              "description": "Units to order.",
+              "default": 1,
+              "minimum": 1
+            }
+          },
+          "required": [
+            "sku"
+          ]
+        },
+        "minItems": 1
+      },
+      "payment_method_id": {
+        "type": "string",
+        "description": "A payment_method_id from the customer's account. When omitted the account default is used."
+      },
+      "address_id": {
+        "type": "string",
+        "description": "A saved address_id to ship to. Required when the account has more than one saved address."
+      }
+    },
+    "required": [
+      "customer_id",
+      "items"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "The customer, or a SKU in items, does not exist."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "items is empty, quantity is below 1, the payment method or address is not on the account, or address_id was omitted on a multi-address account."
+    },
+    {
+      "code": "insufficient_stock",
+      "when": "A SKU has fewer units available than requested; the message gives the number available."
+    }
+  ],
+  "revision": 3
+}

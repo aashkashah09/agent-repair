@@ -9,7 +9,9 @@ from toolsmith.server.tools import ACCEPTED_VALUES, REGISTRY
 SCHEMA_SETS = sorted(
     path for path in (REPO_ROOT / "data" / "schemas").iterdir() if path.is_dir()
 )
-DEPLOYED_SETS = SCHEMA_SETS
+# accept_all is the ablation: it carries the revisions the gate refused, so it
+# is deliberately not held to the invariants the deployed sets are.
+DEPLOYED_SETS = [path for path in SCHEMA_SETS if path.name != "accept_all"]
 
 
 def implementation_parameters(name: str) -> set[str]:
@@ -30,6 +32,36 @@ def test_declared_parameters_exist_on_the_implementation(directory):
         declared = set(schemas[name].parameters)
         accepted = implementation_parameters(name)
         assert declared <= accepted, f"{directory.name}/{name}: {declared - accepted}"
+
+
+def test_the_ablation_advertises_parameters_the_tools_reject():
+    """What the permission check was there to stop.
+
+    Two of the blocked revisions add parameters no implementation takes. An
+    agent reading the accept-all declarations will construct calls the server
+    rejects outright, which is the concrete cost of promoting on measured
+    improvement alone.
+    """
+    schemas = SchemaSet.load(REPO_ROOT / "data" / "schemas" / "accept_all")
+    undeliverable = {
+        name: sorted(set(schemas[name].parameters) - implementation_parameters(name))
+        for name in TOOL_ORDER
+        if set(schemas[name].parameters) - implementation_parameters(name)
+    }
+    assert undeliverable == {"get_customer": ["include_orders", "shipping_speed"]}
+
+
+def test_the_ablation_offers_an_enum_value_the_tool_rejects():
+    schemas = SchemaSet.load(REPO_ROOT / "data" / "schemas" / "accept_all")
+    declared = set(schemas["update_support_ticket"].parameters["priority"]["enum"])
+    assert declared - set(ACCEPTED_VALUES[("update_support_ticket", "priority")]) == {"critical"}
+
+
+def test_the_ablation_drops_a_required_parameter():
+    gated = SchemaSet.load(REPO_ROOT / "data" / "schemas" / "round4")
+    everything = SchemaSet.load(REPO_ROOT / "data" / "schemas" / "accept_all")
+    assert "payment_method_id" in gated["create_order"].required
+    assert "payment_method_id" not in everything["create_order"].required
 
 
 def test_the_reference_set_declares_enums_exactly(clean_schemas):

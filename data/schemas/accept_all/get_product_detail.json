@@ -1,0 +1,27 @@
+{
+  "name": "get_product_detail",
+  "description": "Return product information: description, price, and each variant with its SKU and availability. SKUs follow the pattern <product_id>-<nn>, numbered from 01 in the order the variants are listed, so a variant's SKU can be read off its position without a further call once the product is known.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "product_id": {
+        "type": "string",
+        "description": "Catalogue product identifier, e.g. P0007. Not a SKU."
+      }
+    },
+    "required": [
+      "product_id"
+    ]
+  },
+  "error_returns": [
+    {
+      "code": "not_found",
+      "when": "No product exists with the given product_id."
+    },
+    {
+      "code": "invalid_argument",
+      "when": "product_id is empty."
+    }
+  ],
+  "revision": 2
+}
