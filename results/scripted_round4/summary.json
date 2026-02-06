@@ -1,0 +1,37 @@
+{
+  "run": "scripted_round4",
+  "schema_set": "data/schemas/round4",
+  "schema_set_digest": "cb8d6a18d7f5d784",
+  "defects": "data/defects/seeded_defects.json",
+  "config": "scripted",
+  "config_fingerprint": "1245bab376dd",
+  "seed": 20260105,
+  "user_mode": "scripted",
+  "models": {
+    "agent": "claude-sonnet-5",
+    "user_sim": "claude-sonnet-5",
+    "effort": "medium"
+  },
+  "tasks": 100,
+  "samples_per_task": 8,
+  "runs": 800,
+  "successes": 648,
+  "pass_1": 0.81,
+  "pass_k": 0.56,
+  "pass_k_over_pass_1": 0.69136,
+  "ended_by": {
+    "user": 796,
+    "turn_limit": 4
+  },
+  "mean_turns": 4.694,
+  "mean_tool_calls": 3.88,
+  "token_usage": {
+    "agent_input": 38746166,
+    "agent_output": 936536,
+    "user_input": 3316130,
+    "user_output": 185511
+  },
+  "wall_clock_s": 34903.9,
+  "started_at": "2026-02-05T21:08:26Z",
+  "finished_at": "2026-02-06T06:50:09Z"
+}
