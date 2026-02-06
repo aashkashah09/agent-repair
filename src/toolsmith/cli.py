@@ -11,6 +11,7 @@ from .classifier.calibration import load_labelled
 from .classifier.judge import class_distribution
 from .config import REPO_ROOT, load_config
 from .eval.bootstrap import compare as compare_outcomes
+from .eval.bootstrap import level_interval
 from .eval.harness import Harness, load_outcomes, load_runs
 from .eval.metrics import summarise
 from .optimizer.gate import sensitivity, tally
@@ -123,6 +124,29 @@ def cmd_gate_sensitivity(args: argparse.Namespace) -> None:
         print(json.dumps(payload, indent=2))
 
 
+def cmd_levels(args: argparse.Namespace) -> None:
+    config = load_config(args.config)
+    payload = []
+    for run_dir in sorted(Path(args.results).glob("*/runs.jsonl")):
+        outcomes = load_outcomes(run_dir)
+        one = level_interval(outcomes, "pass_1", config.eval.k,
+                             config.eval.bootstrap_resamples, config.eval.ci_level, config.seed)
+        k = level_interval(outcomes, "pass_k", config.eval.k,
+                           config.eval.bootstrap_resamples, config.eval.ci_level, config.seed)
+        payload.append({
+            "run": run_dir.parent.name,
+            "pass_1": {"value": one[0], "ci_low": one[1], "ci_high": one[2]},
+            "pass_k": {"value": k[0], "ci_low": k[1], "ci_high": k[2]},
+            "ci_level": config.eval.ci_level,
+            "resamples": config.eval.bootstrap_resamples,
+            "paired": False,
+        })
+    if args.out:
+        _write(Path(args.out), payload)
+    else:
+        print(json.dumps(payload, indent=2))
+
+
 def cmd_repair(args: argparse.Namespace) -> None:
     config = load_config(args.config)
     loop = RepairLoop(
@@ -208,6 +232,12 @@ def build_parser() -> argparse.ArgumentParser:
     sweep.add_argument("--decisions", default="results/gate/decisions.jsonl")
     sweep.add_argument("--out")
     sweep.set_defaults(func=cmd_gate_sensitivity)
+
+    levels = sub.add_parser("levels", help="bootstrap intervals on each run's own rates")
+    levels.add_argument("--config", default=DEFAULT_CONFIG)
+    levels.add_argument("--results", default="results")
+    levels.add_argument("--out")
+    levels.set_defaults(func=cmd_levels)
 
     repair = sub.add_parser("repair", help="run the repair loop")
     repair.add_argument("--config", default=DEFAULT_CONFIG)

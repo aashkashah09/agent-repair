@@ -79,6 +79,41 @@ def paired_bootstrap(
     )
 
 
+def level_interval(
+    outcomes: dict[str, list[bool]],
+    statistic: str = "pass_1",
+    k: int = 8,
+    resamples: int = 10000,
+    ci_level: float = 0.95,
+    seed: int = 20260105,
+) -> tuple[float, float, float]:
+    """Bootstrap interval on one evaluation's own pass rate.
+
+    Unpaired, so these are much wider than the paired intervals a comparison
+    produces: most of the spread here is between-task difficulty, which pairing
+    removes. Reported as ``(observed, low, high)`` in percentage points.
+    """
+    task_ids = sorted(outcomes)
+    per_task = np.array(
+        [
+            [sum(outcomes[t]) / len(outcomes[t]) for t in task_ids],
+            [1.0 if len(outcomes[t]) >= k and all(outcomes[t][:k]) else 0.0 for t in task_ids],
+        ]
+    )
+    row = per_task[0] if statistic == "pass_1" else per_task[1]
+
+    rng = np.random.default_rng(seed)
+    draws = rng.integers(0, row.size, size=(resamples, row.size))
+    means = row[draws].mean(axis=1)
+    alpha = (1.0 - ci_level) / 2.0
+    low, high = np.quantile(means, [alpha, 1.0 - alpha])
+    return (
+        round(100.0 * float(row.mean()), 4),
+        round(100.0 * float(low), 4),
+        round(100.0 * float(high), 4),
+    )
+
+
 def compare(
     before: dict[str, list[bool]],
     after: dict[str, list[bool]],

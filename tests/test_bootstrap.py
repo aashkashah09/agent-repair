@@ -1,7 +1,7 @@
 import pytest
 from helpers import outcomes
 
-from toolsmith.eval.bootstrap import compare, paired_bootstrap
+from toolsmith.eval.bootstrap import compare, level_interval, paired_bootstrap
 
 
 def test_interval_brackets_the_observed_mean():
@@ -56,6 +56,38 @@ def test_compare_pairs_on_task_id_not_position():
     result = compare(before, after, resamples=2000, seed=13)
     assert result.n == 3
     assert result.mean == pytest.approx((100.0 + 0.0 + 50.0) / 3)
+
+
+def test_level_interval_brackets_the_observed_rate():
+    data = outcomes({f"T{i:03d}": [1, 1, 1, 0, 0, 0, 0, 0] for i in range(40)})
+    observed, low, high = level_interval(data, "pass_1", k=8, resamples=3000, seed=4)
+    assert observed == pytest.approx(37.5)
+    assert low <= observed <= high
+
+
+def test_level_interval_reports_pass_k_on_the_same_scale():
+    data = outcomes({"T001": [1] * 8, "T002": [1] * 7 + [0], "T003": [0] * 8, "T004": [1] * 8})
+    observed, low, high = level_interval(data, "pass_k", k=8, resamples=2000, seed=6)
+    assert observed == pytest.approx(50.0)
+    assert 0.0 <= low <= high <= 100.0
+
+
+def test_level_interval_is_wider_than_the_paired_comparison():
+    # Pairing removes between-task difficulty, which is most of the spread.
+    before = outcomes({f"T{i:03d}": [1] * (i % 9) + [0] * (8 - i % 9) for i in range(60)})
+    after = {task: results[:] for task, results in before.items()}
+    for results in after.values():
+        if not all(results):
+            results[results.index(False)] = True
+    _, low, high = level_interval(after, "pass_1", k=8, resamples=4000, seed=8)
+    paired = compare(before, after, resamples=4000, seed=8)
+    assert (high - low) > (paired.ci_high - paired.ci_low)
+
+
+def test_level_interval_of_a_uniform_suite_has_no_width():
+    data = outcomes({f"T{i:03d}": [1] * 8 for i in range(20)})
+    observed, low, high = level_interval(data, "pass_1", k=8, resamples=1000, seed=2)
+    assert (observed, low, high) == (100.0, 100.0, 100.0)
 
 
 def test_compare_ignores_tasks_missing_from_either_side():

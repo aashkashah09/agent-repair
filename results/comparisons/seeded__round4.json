@@ -1,0 +1,12 @@
+{
+  "before": "seeded",
+  "after": "round4",
+  "n": 100,
+  "mean": 21.0,
+  "ci_low": 15.125,
+  "ci_high": 27.0,
+  "ci_level": 0.95,
+  "resamples": 10000,
+  "p_two_sided": 0.0,
+  "significant": true
+}

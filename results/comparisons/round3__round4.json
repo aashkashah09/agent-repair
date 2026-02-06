@@ -1,0 +1,12 @@
+{
+  "before": "round3",
+  "after": "round4",
+  "n": 100,
+  "mean": 0.5,
+  "ci_low": -5.75,
+  "ci_high": 6.625,
+  "ci_level": 0.95,
+  "resamples": 10000,
+  "p_two_sided": 0.8886,
+  "significant": false
+}

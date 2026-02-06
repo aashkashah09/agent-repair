@@ -1,0 +1,12 @@
+{
+  "before": "ablation_accept_all",
+  "after": "hand_tuned",
+  "n": 100,
+  "mean": 8.0,
+  "ci_low": 1.5,
+  "ci_high": 14.625,
+  "ci_level": 0.95,
+  "resamples": 10000,
+  "p_two_sided": 0.0144,
+  "significant": true
+}

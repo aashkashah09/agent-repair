@@ -1,0 +1,12 @@
+{
+  "before": "round4",
+  "after": "ablation_accept_all",
+  "n": 100,
+  "mean": -3.0,
+  "ci_low": -5.0,
+  "ci_high": -1.125,
+  "ci_level": 0.95,
+  "resamples": 10000,
+  "p_two_sided": 0.0006,
+  "significant": true
+}

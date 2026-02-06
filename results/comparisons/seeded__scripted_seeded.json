@@ -1,0 +1,12 @@
+{
+  "before": "seeded",
+  "after": "scripted_seeded",
+  "n": 100,
+  "mean": 11.0,
+  "ci_low": 6.375,
+  "ci_high": 15.5,
+  "ci_level": 0.95,
+  "resamples": 10000,
+  "p_two_sided": 0.0,
+  "significant": true
+}

@@ -1,0 +1,12 @@
+{
+  "before": "seeded",
+  "after": "ablation_accept_all",
+  "n": 100,
+  "mean": 18.0,
+  "ci_low": 11.75,
+  "ci_high": 24.25,
+  "ci_level": 0.95,
+  "resamples": 10000,
+  "p_two_sided": 0.0,
+  "significant": true
+}
