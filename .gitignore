@@ -1,4 +1,21 @@
 __pycache__/
 *.py[cod]
 .venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Full episode transcripts are large and regenerable from runs.jsonl + seeds.
+traces/
+results/**/traces/
+*.trace.jsonl
+
+.env
 .DS_Store
+.idea/
+.vscode/
