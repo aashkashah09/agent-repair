@@ -47,6 +47,8 @@ The simulator implements difficult-user personas: underspecified requests, mid-t
 
 The gate's rejections quantify what weaker acceptance criteria would have deployed. Nine revisions improved their target task while regressing others; under point-estimate comparison all nine would have been promoted, and even a k=1 gate would have shipped six of them. Three revisions expanded tool permissions and were rejected on that criterion alone. For infrastructure that modifies its own configuration, the evaluation suite functions as change control, and these counts are the evidence that the control is necessary.
 
+Deploying every proposal rather than gating them shows what that control prevents. All 31 revisions ship, and pass^1 reaches 66% against the gated 69%, so most of the mean gain survives. pass^8 falls to 30% against 41%: accepting everything keeps the average but loses the consistency. It also deploys the three permission-expanding revisions, which between them advertise two parameters no tool accepts, a priority level the server rejects, and a required field made optional.
+
 ## Current and Future Work
 
 The scope above is complete. Current work: validating the loop across agent models, since the design is model-agnostic and has been verified on one; applying the repairer to real public MCP servers rather than seeded defects; and multi-tool interaction defects, where two individually well-specified interfaces are jointly ambiguous. Once this stage is complete, a complete reproduce section will be added.
