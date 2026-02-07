@@ -1,21 +1,25 @@
 """Render assets/repair_curve.png from the committed run summaries.
 
-Reads pass^1 and pass^8 out of each round's summary.json and plots them against
-the seeded baseline and the hand-tuned ceiling.
+Plots pass^1 and pass^8 across the repair rounds against the seeded baseline
+and the hand-tuned ceiling. Bands are 95% bootstrap intervals on each round's
+own rate, resampled over tasks; they are unpaired and therefore much wider than
+the round-over-round intervals in results/comparisons, where pairing removes
+the between-task spread that dominates here.
 """
 
 from __future__ import annotations
 
-import json
 import sys
-from pathlib import Path
 
 import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+from toolsmith.config import REPO_ROOT, load_config  # noqa: E402
+from toolsmith.eval.bootstrap import level_interval  # noqa: E402
+from toolsmith.eval.harness import load_outcomes  # noqa: E402
+
 RESULTS = REPO_ROOT / "results"
 OUT = REPO_ROOT / "assets" / "repair_curve.png"
 
@@ -26,61 +30,79 @@ SURFACE = "#fcfcfb"
 INK = "#0b0b0b"
 INK_SOFT = "#52514e"
 GRID = "#e4e3df"
-PASS_1 = "#2a78d6"
-PASS_K = "#eb6834"
+SERIES = {"pass^1": "#2a78d6", "pass^8": "#eb6834"}
 
 
-def read(name: str) -> dict:
-    return json.loads((RESULTS / name / "summary.json").read_text())
+def intervals(statistic: str, config) -> list[tuple[float, float, float]]:
+    return [
+        level_interval(
+            load_outcomes(RESULTS / name / "runs.jsonl"),
+            statistic=statistic,
+            k=config.eval.k,
+            resamples=config.eval.bootstrap_resamples,
+            ci_level=config.eval.ci_level,
+            seed=config.seed,
+        )
+        for name in ROUNDS + ["hand_tuned"]
+    ]
 
 
 def main() -> int:
-    summaries = {name: read(name) for name in ROUNDS + ["hand_tuned"]}
-    pass_1 = [summaries[name]["pass_1"] * 100 for name in ROUNDS]
-    pass_k = [summaries[name]["pass_k"] * 100 for name in ROUNDS]
-    ceiling_1 = summaries["hand_tuned"]["pass_1"] * 100
-    ceiling_k = summaries["hand_tuned"]["pass_k"] * 100
+    config = load_config(REPO_ROOT / "configs" / "default.yaml")
+    series = {"pass^1": intervals("pass_1", config), "pass^8": intervals("pass_k", config)}
     x = list(range(len(ROUNDS)))
 
-    fig, ax = plt.subplots(figsize=(7.6, 4.5), dpi=200)
+    fig, ax = plt.subplots(figsize=(7.8, 4.7), dpi=200)
     fig.patch.set_facecolor(SURFACE)
     ax.set_facecolor(SURFACE)
 
-    for value in (ceiling_1, ceiling_k):
-        colour = PASS_1 if value == ceiling_1 else PASS_K
-        ax.axhline(value, color=colour, linewidth=1.2, linestyle=(0, (5, 4)), alpha=0.55)
+    for name, points in series.items():
+        colour = SERIES[name]
+        rounds, ceiling = points[:-1], points[-1]
+        values = [p[0] for p in rounds]
+        low = [p[1] for p in rounds]
+        high = [p[2] for p in rounds]
+
+        ax.axhline(ceiling[0], color=colour, linewidth=1.1, linestyle=(0, (5, 4)), alpha=0.5)
         ax.annotate(
-            f"hand-tuned ceiling  {value:.0f}%",
-            xy=(len(ROUNDS) - 1, value), xytext=(0, 6), textcoords="offset points",
-            ha="right", va="bottom", fontsize=8.5, color=INK_SOFT,
+            f"ceiling {ceiling[0]:g}%",
+            xy=(len(ROUNDS) - 1, ceiling[0]), xytext=(0, 5), textcoords="offset points",
+            ha="right", va="bottom", fontsize=8, color=INK_SOFT,
         )
 
-    ax.plot(x, pass_1, color=PASS_1, linewidth=2, marker="o", markersize=8,
-            markeredgecolor=SURFACE, markeredgewidth=2, label="pass^1", zorder=3)
-    ax.plot(x, pass_k, color=PASS_K, linewidth=2, marker="o", markersize=8,
-            markeredgecolor=SURFACE, markeredgewidth=2, label="pass^8", zorder=3)
+        ax.fill_between(x, low, high, color=colour, alpha=0.13, linewidth=0)
+        ax.errorbar(
+            x, values, yerr=[
+                [v - lo for v, lo in zip(values, low, strict=True)],
+                [hi - v for v, hi in zip(values, high, strict=True)],
+            ],
+            fmt="none", ecolor=colour, elinewidth=1.1, capsize=3, alpha=0.75, zorder=2,
+        )
+        ax.plot(x, values, color=colour, linewidth=2, marker="o", markersize=7,
+                markeredgecolor=SURFACE, markeredgewidth=1.8, label=name, zorder=3)
 
-    for series in (pass_1, pass_k):
-        last = len(series) - 1
-        ax.annotate(f"{series[0]:g}%", xy=(0, series[0]), xytext=(0, 12),
-                    textcoords="offset points", ha="center", va="bottom",
+        ax.annotate(f"{values[0]:g}%", xy=(0, values[0]), xytext=(-13, 0),
+                    textcoords="offset points", ha="right", va="center",
                     fontsize=9.5, color=INK)
-        ax.annotate(f"{series[last]:g}%", xy=(last, series[last]), xytext=(11, 0),
+        ax.annotate(f"{values[-1]:g}%", xy=(len(ROUNDS) - 1, values[-1]), xytext=(13, 0),
                     textcoords="offset points", ha="left", va="center",
                     fontsize=9.5, color=INK)
 
     ax.set_xticks(x)
     ax.set_xticklabels(LABELS, fontsize=9.5, color=INK_SOFT)
-    ax.set_xlim(-0.35, len(ROUNDS) - 0.55)
-    ax.set_ylim(10, 82)
-    ticks = [20, 30, 40, 50, 60, 70, 80]
+    ax.set_xlim(-0.55, len(ROUNDS) - 0.45)
+    ax.set_ylim(8, 86)
+    ticks = [10, 20, 30, 40, 50, 60, 70, 80]
     ax.set_yticks(ticks)
     ax.set_yticklabels([f"{v}%" for v in ticks], fontsize=9, color=INK_SOFT)
-    ax.set_ylabel("task reliability", fontsize=9.5, color=INK_SOFT, labelpad=8)
-    ax.set_title(
-        "Reliability across repair rounds, 100 tasks at k=8, adversarial users",
-        fontsize=11, color=INK, loc="left", pad=14,
-    )
+    ax.set_ylabel("tasks solved", fontsize=9.5, color=INK_SOFT, labelpad=8)
+
+    ax.set_title("Task reliability across repair rounds", fontsize=11.5, color=INK,
+                 loc="left", pad=20)
+    ax.text(0.0, 1.015,
+            f"100 tasks, k={config.eval.k}, adversarial users; band is a 95% bootstrap "
+            "interval over tasks",
+            transform=ax.transAxes, fontsize=8.5, color=INK_SOFT, va="bottom")
 
     ax.grid(axis="y", color=GRID, linewidth=0.8)
     ax.set_axisbelow(True)
@@ -89,8 +111,8 @@ def main() -> int:
     for side in ("left", "bottom"):
         ax.spines[side].set_color(GRID)
 
-    legend = ax.legend(loc="lower right", frameon=False, fontsize=9.5, handlelength=2.6,
-                       borderaxespad=0.2)
+    legend = ax.legend(loc="lower right", frameon=False, fontsize=9.5, handlelength=2.4,
+                       borderaxespad=0.6)
     for text in legend.get_texts():
         text.set_color(INK_SOFT)
 
